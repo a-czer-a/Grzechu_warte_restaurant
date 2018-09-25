@@ -1,0 +1,604 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grzechu Warte</title>
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <header>
+        <div class="top-info grid-x align-justify">
+            <div class="cell small-10 medium-10 large-10">
+                <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+                  </div>
+        
+              <ul class="menu vertical medium-horizontal" id="example-menu">
+                  <li><a href="#menu">Menu</a></li>
+                  <li><a href="#">Galeria</a></li>
+                  <li><a href="#">Kontakt</a></li>
+                <!-- <li class="align-self-middle">Rybnicka 43, Lyski</li>
+                <li><button type="button" class="button hollow">790 850 580</button></li> -->
+              </ul>
+            </div>
+            <div class="top-social cell small-2 medium-2 large-2 text-right"><a href="https://www.facebook.com/Grzechu-Warte-2211861392436989/" class="cell small-6 medium-6 large-6 align-self-middle text-right"><i class="fab fa-facebook-square"></i></a></div>
+        </div>
+        
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon fill="#fff" points="0,100 100,0 100,100"/>
+      </svg>
+      <div class="logo-container text-center">
+        <img class="logo" src="img/grzechu-warte-logo.jpg" alt="">
+      </div>
+
+    </header>
+    <!-- <div class="skewed"> -->
+        <!-- <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
+          </div> -->
+          
+          <!-- <div class="top-bar" id="example-menu">
+            <div class="top-bar-left">
+              <ul class="menu">
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="#">Kontakt</a></li>
+              </ul>
+            </div>
+          </div> -->
+    <!-- </div> -->
+
+    <main>
+      <!-- <div class="burger-cutout text-center">
+        <img src="img/burger-cutout.png" alt="">
+      </div> -->
+      <div class="orbit text-right" role="region" aria-label="Burger i pizza" data-orbit>
+          <div class="orbit-wrapper">
+            <div class="orbit-controls">
+              <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+              <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+            </div>
+            <ul class="orbit-container">
+              <li class="is-active orbit-slide">
+                <figure class="orbit-figure">
+                  <img class="orbit-image" src="img/burger-cutout.png" alt="Burger">
+                  <div class="orbit-slogan text-center show-for-large">
+                    <h3>Sześć burgerów do wyboru</h3>
+                    <h5>Z wołowiną, wieprzowiną lub wege!</h5>
+                    <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                  </div>
+                </figure>
+                <div class="hide-for-large orbit-slogan-mobile text-center">
+                  <h3>Sześć burgerów do wyboru.</h3>
+                  <h5>Z wołowiną, wieprzowiną lub wege!</h5>
+                  <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                </div>
+      
+              </li>
+              <li class="orbit-slide">
+                <figure class="orbit-figure">
+                  <img class="orbit-image pizza-slice" src="img/pizza-slice-cutout.jpg" alt="Pizza">
+                  <div class="orbit-slogan text-center show-for-large">
+                    <h3>Pyszna pizza, naturalne składniki</h3>
+                    <h5>Wybierz sos i spód pizzy!</h5>
+                    <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                  </div>  
+                </figure>
+                <div class="hide-for-large orbit-slogan-mobile text-center">
+                    <h3>Pyszna pizza, naturalne składniki</h3>
+                    <h5>Wybierz sos i spód pizzy!</h5>
+                    <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                </div>      
+              </li>
+            </ul>
+          </div>
+          <nav class="orbit-bullets">
+            <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+            <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+          </nav>
+        </div>
+
+      <section class="food" id="menu">
+          <div class="skewed-small-light"></div>
+          <div class="skewed-small"></div>
+    
+          <ul class="tabs text-center grid-x grid-margin-x align-center" data-tabs id="menu-tabs">
+              <li id="pizza-tab" class="tabs-title is-active cell small-auto"><a href="#pizza" aria-selected="true"><img src="img/pizza-slice-color.png" class="food-icon" alt="" id="pizza-img"></a></li>
+              <li id="burgery-tab" class="tabs-title cell small-auto"><a data-tabs-target="burgery" href="#burgery"><img src="img/burger.png" class="food-icon" alt="" id="burgery-img"></a></li>
+              <li id="makarony-tab" class="tabs-title cell small-auto"><a data-tabs-target="makarony" href="#makarony"><img src="img/noodles.png" class="food-icon" alt="" id="makarony-img"></a></li>
+              <li id="sałatki-tab" class="tabs-title cell small-auto"><a data-tabs-target="sałatki" href="#sałatki"><img src="img/salad.png" class="food-icon" alt="" id="sałatki-img"></a></li>
+              <li id="dodatki-tab" class="tabs-title cell small-auto"><a data-tabs-target="dodatki" id="dodatki-a" href="#dodatki" ><img src="img/fried-potatoes.png" class="food-icon" alt="" id="dodatki-img"></a></li>
+              <li id="napoje-tab" class="tabs-title cell small-auto"><a data-tabs-target="napoje" href="#napoje"><img src="img/coffee-cup.png" class="food-icon" alt="" id="napoje-img"></a></li>
+              <li id="extra-tab" class="tabs-title cell small-auto"><a data-tabs-target="extra" href="#extra"><img src="img/chef-hat.png" class="food-icon" alt="" id="extra-img"></a></li>
+          </ul>
+          <div class="tabs-content" data-tabs-content="menu-tabs">
+
+            <!-- PIZZA -->
+              <div class="tabs-panel is-active" id="pizza">
+                  <div class="menu-container">
+                    <h4 class="menu-item">Pizza</h4>
+                    <div class="menu-item-info">
+                      <p><i class="fas fa-arrow-circle-right"></i> Do wyboru ciasto: białe lub razowe.</p> 
+                      <p><i class="fas fa-arrow-circle-right"></i> Do wyboru sos na spód: pomidorowy lub śmietanowy.</p>
+                      <p><i class="fas fa-arrow-circle-right"></i> Pół na pół tylko przy zamówieniu pizzy XL i&nbsp;XXL.</p>
+                      <button class="button hollow" type="button" onclick="openDivWithInfo()">Dodatkowe informacje</button>
+                      <div class="hidden-info" id="hidden-info">
+                          <p><i class="fas fa-arrow-circle-right"></i> Mąka prosto z młyna.</p>
+                          <p><i class="fas fa-arrow-circle-right"></i> Do każdej pizzy i dania na wynos opakowanie dodatkowo płatne 2 zł.</p>
+                          <p><i class="fas fa-arrow-circle-right"></i> Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                          <p><i class="fas fa-arrow-circle-right"></i> Zapytaj o inne lokalizacje.</p>
+                          <p><i class="fas fa-arrow-circle-right"></i> Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p>    
+                      </div>
+                      <!-- <p>* Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                      <p>* Zapytaj o inne lokalizacje.</p>
+                      <p>* Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p> -->
+                    </div>
+                    <table class="unstriped hover">
+                        <thead>
+                          <tr>
+                            <th class="invisible">Pizza</th>
+                            <th width="60" class="text-center size">L<br><span class="ingredients">30 &#216;</span></th>
+                            <th width="60" class="text-center size">XL<br><span class="ingredients">42 &#216;</span></th>
+                            <th width="60" class="text-center size">XXL<br><span class="ingredients">60 &#216;</span></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><span class="food-name">1. Studencka</span><br><span class="ingredients">ser, mimolette</span></td>
+                            <td class="text-center">17 zł</td>
+                            <td class="text-center">27 zł</td>
+                            <td class="text-center">39 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">2. Jak Reksio szynkę</span><br><span class="ingredients">ser, szynka</span></td>
+                            <td class="text-center">22 zł</td>
+                            <td class="text-center">30 zł</td>
+                            <td class="text-center">40 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">3.	Salami</span><br><span class="ingredients">ser, pepperoni, pieczarki</span></td>
+                            <td class="text-center">22 zł</td>
+                            <td class="text-center">31 zł</td>
+                            <td class="text-center">42 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">4. Pesto</span><br><span class="ingredients">pesto bazyliowe, mozarella di bufala, pomidorki koktajlowe, czerwona cebula, papryka, rukola, orzechy, ser Grana Padano</span></td>
+                            <td class="text-center">26 zł</td>
+                            <td class="text-center">34 zł</td>
+                            <td class="text-center">48 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">5. Pani Pieczarka</span><br><span class="ingredients">ser, pieczarki, papryka, szynka</span></td>
+                            <td class="text-center">25 zł</td>
+                            <td class="text-center">33 zł</td>
+                            <td class="text-center">45 zł</td>
+                          </tr>                          
+                          <tr>
+                            <td><span class="food-name">6. Cukinia</span><br><span class="ingredients">ser, grillowana cukinia, ser feta</span></td>
+                            <td class="text-center">23 zł</td>
+                            <td class="text-center">30 zł</td>
+                            <td class="text-center">42 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">7. Góralska</span><br><span class="ingredients">ser, boczek, ser mimolette, cebula, mielona kiełbasa</span></td>
+                            <td class="text-center">26 zł</td>
+                            <td class="text-center">35 zł</td>
+                            <td class="text-center">50 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">8. Morze Czerwone</span><br><span class="ingredients">ser, tuńczyk, cebula czerwona, oliwki, rukola, ser Grana Padano</span></td>
+                            <td class="text-center">25 zł</td>
+                            <td class="text-center">34 zł</td>
+                            <td class="text-center">48 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">9. Zielona Rozkosz</span><br><span class="ingredients">ser, mozzarella di bufala, szpinak, brokuł, zielony groszek, prażone pestki dyni, szczypiorek</span></td>
+                            <td class="text-center">25 zł</td>
+                            <td class="text-center">35 zł</td>
+                            <td class="text-center">38 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">10. Pan Burak</span><br><span class="ingredients">ser, burak, ser feta, czerwona cebula, pomidorki koktajlowe, prażone pestki nasion</span></td>
+                            <td class="text-center">24 zł</td>
+                            <td class="text-center">34 zł</td>
+                            <td class="text-center">45 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">11. Grecka</span><br><span class="ingredients">sos śmietanowy, ser, grillowany kurczak, cebula, oliwki, papryka, ser feta</span></td>
+                            <td class="text-center">26 zł</td>
+                            <td class="text-center">36 zł</td>
+                            <td class="text-center">50 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">12. "Ta dyn"</span><br><span class="ingredients">ser mimolette, grillowany kurczak, cebula, boczek, pieczarki</span></td>
+                            <td class="text-center">27 zł</td>
+                            <td class="text-center">36 zł</td>
+                            <td class="text-center">52 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">13. Piekielna</span><br><span class="ingredients">ser, ostre salami, jalapeño, papryka, cebula, pieczarki</span></td>
+                            <td class="text-center">24 zł</td>
+                            <td class="text-center">34 zł</td>
+                            <td class="text-center">46 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">14. Pan Kurczak</span><br><span class="ingredients">ser, brokuł, kurczak, papryka, cebula</span></td>
+                            <td class="text-center">26 zł</td>
+                            <td class="text-center">35 zł</td>
+                            <td class="text-center">50 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">15. Rybka lubi pływać</span><br><span class="ingredients">ser, mozarella di bufala, suszone pomidory, oliwki, wędzony łosoś, szczypiorek</span></td>
+                            <td class="text-center">28 zł</td>
+                            <td class="text-center">36 zł</td>
+                            <td class="text-center">54 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">16. Grzechu warta</span><br><span class="ingredients">papryka, mielona kiełbasa, ser mimolette, sałata, pomidory, chipsy taco</span></td>
+                            <td class="text-center">28 zł</td>
+                            <td class="text-center">38 zł</td>
+                            <td class="text-center">52 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">17. Królewska</span><br><span class="ingredients">ser, krewetki tygrysie, czosnek, pomidorki koktajlowe, mozarella di bufala, szczypiorek</span></td>
+                            <td class="text-center">29 zł</td>
+                            <td class="text-center">39 zł</td>
+                            <td class="text-center">55 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">18. Lekka jak piórko</span><br><span class="ingredients">pesto bazyliowe, mozarella, ser feta, suszone pomidory, oliwki, czerwona cebula, rukola, prażone pestki nasion, ser Grana Padano</span></td>
+                            <td class="text-center">25 zł</td>
+                            <td class="text-center">35 zł</td>
+                            <td class="text-center">48 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">18. Pan Szpinak</span><br><span class="ingredients">ser, szpinak, kurczak, cebula, ser feta, czosnek, ser Grana Padano</span></td>
+                            <td class="text-center">27 zł</td>
+                            <td class="text-center">36 zł</td>
+                            <td class="text-center">50 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">19. Serowy zawrót głowy</span><br><span class="ingredients">sery cheddar, mimolette, camembert, mozarella</span></td>
+                            <td class="text-center">25 zł</td>
+                            <td class="text-center">35 zł</td>
+                            <td class="text-center">50 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">20. Klasyk</span><br><span class="ingredients">ser mimolette, pieczarki, papryka, cebula, pepperoni</span></td>
+                            <td class="text-center">26 zł</td>
+                            <td class="text-center">36 zł</td>
+                            <td class="text-center">48 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">21. Szefa</span><br><span class="ingredients">ser, szarpana wieprzowina, cebula, czosnek, mozarella di bufala, sałata, ogórek konserwowy</span></td>
+                            <td class="text-center">27 zł</td>
+                            <td class="text-center">38 zł</td>
+                            <td class="text-center">52 zł</td>
+                          </tr>
+                          <tr>
+                            <td><span class="food-name">22. Pan Podgrzybek</span><br><span class="ingredients">sos serowy, cebula, ser mimolette, podgrzybki</span></td>
+                            <td class="text-center">26 zł</td>
+                            <td class="text-center">36 zł</td>
+                            <td class="text-center">50 zł</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <div class="sosy grid-x">
+                        <h4 class="cell small-6 medium-6 large-6 text-left">Sosy do pizzy</h4>
+                        <p class="cell small-6 medium-6 large-6 text-right cena">2,50 zł</p>
+                        <p class="cell small-12">czosnkowy, tatarski, firmowy lekko ostry, pomidorowy, oliwa czosnkowa, oliwa pikantna</p> 
+                      </div>
+                  </div>
+              </div>
+
+              <!-- BURGERY -->
+              <div class="tabs-panel" id="burgery">
+                  <div class="menu-container">
+                      <h4 class="menu-item">Burgery</h4>
+                      <div class="menu-item-info">
+                        <p><i class="fas fa-arrow-circle-right"></i> 200 g</p> 
+                        <button class="button hollow" type="button" onclick="openDivWithInfo()">Dodatkowe informacje</button>
+                        <div class="hidden-info" id="hidden-info-burger">
+                            <p><i class="fas fa-arrow-circle-right"></i> Do każdej pizzy i dania na wynos opakowanie dodatkowo płatne 2 zł.</p>
+                            <p><i class="fas fa-arrow-circle-right"></i> Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                            <p><i class="fas fa-arrow-circle-right"></i> Zapytaj o inne lokalizacje.</p>
+                            <p><i class="fas fa-arrow-circle-right"></i> Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p>    
+                        </div>
+                      </div>
+                      <table class="unstriped hover">
+                          <tbody>
+                            <tr>
+                              <td><span class="food-name">1. Boski polski</span><br><span class="ingredients">wołowina 100%, bułka pszenna, mix sałat, cheddar, czerwona cebula, ogórek konserwowy, pomidor, grillowane pieczarki, sos musztardowy</span></td>
+                              <td width="60">17 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">2. Szefa</span><br><span class="ingredients">szarpana wieprzowina, bułka pszenna, mix sałat, czerwona cebula, ogórek, pomidor, ser mimolette, sos tatarski lub firmowy</span></td>
+                              <td>17 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">3. Piekielnie ostry</span><br><span class="ingredients">wołowina 100%, bułka pszenna, jalapeño, czerwona cebula, sałata, pomidor, ogórek, grillowane pieczarki, sos firmowy</span></td>
+                              <td>17 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">4. W greckim stylu</span><br><span class="ingredients">kurczak gyros, bułka, mix sałat, cebula czerwona, ser feta, pomidor, oliwki, sos czosnkowy</span></td>
+                              <td>17 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">5. Lżejsza wersja</span><br><span class="ingredients">bazyliowe pesto, bułka, mozarella di bufala, rukola, czerwona cebula, pomidor, ogórek, prażone pestki nasion, ser Grana Padano</span></td>
+                              <td>17 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">6. Nazwij go, jak chcesz</span><br><span class="ingredients">grillowany camembert, bułka, rukola, czerwona cebula, ser mimolette, pomidor, ogórek konserwowy, grillowana gruszka, sos musztardowy</span></td>
+                              <td>17 zł</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+
+              <!-- MAKARONY  -->
+              <div class="tabs-panel" id="makarony">
+                  <div class="menu-container">
+                      <h4 class="menu-item">Makarony</h4>
+                      <div class="menu-item-info">
+                          <button class="button hollow" type="button" onclick="openDivWithInfo()">Dodatkowe informacje</button>
+                          <div class="hidden-info" id="hidden-info-noodle">
+                              <p><i class="fas fa-arrow-circle-right"></i> Do każdej pizzy i dania na wynos opakowanie dodatkowo płatne 2 zł.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Zapytaj o inne lokalizacje.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p>    
+                          </div>
+                      </div>
+
+                      <table class="unstriped hover">
+                          <tbody>
+                            <tr>
+                              <td><span class="food-name">1. Zielone tagliatelle</span><br><span class="ingredients">sos śmietanowy, brokuł, groszek, ser Grana Padano, szczypiorek</span></td>
+                              <td width="60">22 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">2. Tagliatelle z kurczakiem</span><br><span class="ingredients">sos śmietanowy, cebula, boczek, kurczak, pieczarki, ser Grana Padano</span></td>
+                              <td>26 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">3. Tortellini serowe ze szpinakiem</span><br><span class="ingredients">sos śmietanowy, czosnek, cebula, szpinak, kurczak, jajko, ser Grana Padano</span></td>
+                              <td>26 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">4. Tagliatelle z krewetkami</span><br><span class="ingredients">krewetki tygrysie, pomidorki koktajlowe, czosnek, sos śmietanowy, ser Grana Padano</span></td>
+                              <td>26 zł</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+              </div>
+
+              <!-- SAŁATKI -->
+              <div class="tabs-panel" id="sałatki">
+                  <div class="menu-container">
+                      <h4 class="menu-item">Sałatki</h4>
+                      <div class="menu-item-info">
+                        <p><i class="fas fa-arrow-circle-right"></i>Do każdej sałatki serwujemy paluchy z tortilli.</p> 
+                        <button class="button hollow" type="button" onclick="openDivWithInfo()">Dodatkowe informacje</button>
+                        <div class="hidden-info" id="hidden-info-salad">
+                            <p><i class="fas fa-arrow-circle-right"></i> Do każdej pizzy i dania na wynos opakowanie dodatkowo płatne 2 zł.</p>
+                            <p><i class="fas fa-arrow-circle-right"></i> Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                            <p><i class="fas fa-arrow-circle-right"></i> Zapytaj o inne lokalizacje.</p>
+                            <p><i class="fas fa-arrow-circle-right"></i> Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p>    
+                        </div>
+                      </div>  
+                      <table class="unstriped hover">
+                          <tbody>
+                            <tr>
+                              <td><span class="food-name">1. Z bazyliowym pesto</span><br><span class="ingredients">mix sałat, tortellini, mini mozarella, orzechy, ser Grana Padano, bazyliowe pesto</span></td>
+                              <td width="60">18 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">2. Z krewetkami</span><br><span class="ingredients">mix sałat, pomidorki koktajlowe, krewetki tygrysie, ogórek, prażone pestki nasion, sos czosnkowy, szczypiorek</span></td>
+                              <td>20 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">3. Z kurczakiem</span><br><span class="ingredients">mix sałat, grillowane fileciki drobiowe, ser feta, pomidorki koktajlowe, ogórek, czerwona cebula, sos czosnkowy</span></td>
+                              <td>19 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">4. Z pieczonym burakiem</span><br><span class="ingredients">rukola, burak, ser feta, czerwona cebula, pomidorki koktajlowe, jajko, ogórek, prażone pestki nasion, dressing</span></td>
+                              <td>18 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">5. Tęcza smaków</span><br><span class="ingredients">mix sałat, mini mozarella, mandarynka, pomidorki koktajlowe, orzechy, ser Grana Padano, dressing orzechowy</span></td>
+                              <td>18 zł</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                  </div>             
+              </div>
+
+                  <!-- DODATKI -->
+              <div class="tabs-panel" id="dodatki">
+                  <div class="menu-container">
+                      <h4 class="menu-item">Dodatki</h4>
+                      <div class="menu-item-info">
+                          <button class="button hollow" type="button" onclick="openDivWithInfo()">Dodatkowe informacje</button>
+                          <div class="hidden-info" id="hidden-info-extras">
+                              <p><i class="fas fa-arrow-circle-right"></i> Do każdej pizzy i dania na wynos opakowanie dodatkowo płatne 2 zł.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Zapytaj o inne lokalizacje.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p>    
+                          </div>
+                        </div>  
+                      <table class="unstriped hover">
+                          <tbody>
+                            <tr>
+                              <td><span class="food-name">Frytki i ketchup</span></td>
+                              <td width="130" class="text-right">150 g / 4 zł</td>
+                              <td width="130" class="text-right">300 g / 6 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Frytki z batatów i sos czosnkowy</span></td>
+                              <td width="130" class="invisible"></td>
+                              <td width="130" class="text-right">300 g / 10 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Szarpanki i sos</span></td>
+                              <td width="130" class="invisible"></td>
+                              <td width="130" class="text-right">12 szt. / 6 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Zakręcony ziemniak i sos</span></td>
+                              <td width="130" class="invisible"></td>
+                              <td width="130" class="text-right">7 zł</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>                           
+                </div>
+                <!-- NAPOJE -->
+              <div class="tabs-panel" id="napoje">
+                  <div class="menu-container">
+                      <h4 class="menu-item extra-margin">Napoje gorące</h4>
+                      <table class="unstriped hover">
+                          <tbody>
+                            <tr>
+                              <td><span class="food-name">Kawa cappuccino</span></td>
+                              <td width="130" class="text-right">7 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Kawa latte</span></td>
+                              <td width="130" class="text-right">8 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Kawa czarna</span></td>
+                              <td width="130" class="text-right">5 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Herbata (filiżanka)</span></td>
+                              <td width="130" class="text-right">5 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Herbata (dzbanek)</span></td>
+                              <td width="130" class="text-right">8 zł</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>      
+                    <br>
+                    <div class="menu-container">
+                        <h4 class="menu-item extra-margin">Napoje zimne</h4>
+                        <table class="unstriped hover">
+                            <tbody>
+                              <tr>
+                                <td><span class="food-name">Coca-cola, Coca-cola Zero, Fanta, Sprite, Tonic Kinley</span></td>
+                                <td width="130" class="invisible"></td>
+                                <td width="130" class="text-right">0,25 l / 3,5 zł</td>
+                              </tr>
+                              <tr>
+                                <td><span class="food-name">Woda gazowana / niegazowana</span></td>
+                                <td width="130" class="text-right">0,33 l / 3 zł</td>
+                                <td width="130" class="text-right">0,5 l / 3,5 zł</td>
+                              </tr>
+                              <tr>
+                                <td><span class="food-name">Soki Cappy</span></td>
+                                <td width="130" class="invisible"></td>
+                                <td width="130" class="text-right">0,25 l / 3,5 zł</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>    
+                      <br>
+                      <div class="menu-container">
+                          <h4 class="menu-item extra-margin">Piwo lane</h4>
+                          <table class="unstriped hover">
+                              <tbody>
+                                <tr>
+                                  <td><span class="food-name">Brackie Zlatecky</span></td>
+                                  <td width="130" class="text-right">0,5 l / 5 zł</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>  
+                        <br>
+                      <div class="menu-container">
+                          <h4 class="menu-item extra-margin">Piwo butelka</h4>
+                          <table class="unstriped hover">
+                              <tbody>
+                                <tr>
+                                  <td><span class="food-name">Żywiec, Warka, EB</span></td>
+                                  <td width="130" class="text-right">0,5 l / 6 zł</td>
+                                </tr>
+                                <tr>
+                                  <td><span class="food-name">Desperados</span></td>
+                                  <td width="130" class="text-right">0,4 l / 7 zł</td>
+                                </tr>
+                                <tr>
+                                  <td><span class="food-name">Heineken</span></td>
+                                  <td width="130" class="text-right">0,5 l / 7 zł</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>       
+                        <br>
+                      <div class="menu-container">
+                          <h4 class="menu-item extra-margin">Strefa zero</h4>
+                          <table class="unstriped hover">
+                              <tbody>
+                                <tr>
+                                  <td><span class="food-name">Heineken, Żywiec, Warka Radler</span></td>
+                                  <td width="130" class="text-right">0,5 l / 6 zł</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>                              
+              </div>
+
+              <div class="tabs-panel" id="extra">
+                  <div class="menu-container">
+                      <h4 class="menu-item">Szef kuchni poleca</h4>
+                      <div class="menu-item-info">
+                          <button class="button hollow" type="button" onclick="openDivWithInfo()">Dodatkowe informacje</button>
+                          <div class="hidden-info" id="hidden-info-chef">
+                              <p><i class="fas fa-arrow-circle-right"></i> Do każdej pizzy i dania na wynos opakowanie dodatkowo płatne 2 zł.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Dostawy do firmy i domu realizujemy od 30 zł do 5 km gratis.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Zapytaj o inne lokalizacje.</p>
+                              <p><i class="fas fa-arrow-circle-right"></i> Dokładamy wszelkich starań, aby dania były wydawane najszybciej, jak to jest możliwe, jednak w weekendy czas oczekiwania może się wydłużyć &ndash; zależy nam na zachowaniu najwyższej jakości.</p>    
+                          </div>
+                      </div>  
+                      <table class="unstriped hover">
+                          <tbody>
+                            <tr>
+                              <td><span class="food-name">Krem z podgrzybków z tortellini</span></td>
+                              <td width="130" class="text-right">8 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name">Stek z kurczaka z porem i camembertem, puree z groszku, dressing orzechowy, grillowane warzywa</span></td>
+                              <td width="130" class="text-right">20 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name"><span class="uppercase">Deser</span><br><span class="ingredients">lody waniliowe, mus z selera, karmelizowana gruszka, sos czekoladowy</span></span></td>
+                              <td width="130" class="text-right">10 zł</td>
+                            </tr>
+                            <tr>
+                              <td><span class="food-name-name"><span class="uppercase">Uwaga, z drogi... swojskie pierogi</span><br><span class="ingredients">pierogi ruskie</span></span></td>
+                              <td width="130" class="text-right">10 szt. / 15 zł</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>                           
+              </div>
+            </div>
+      </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/what-input/dist/what-input.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>

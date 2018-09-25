@@ -1,0 +1,398 @@
+
+body {
+    background-color: $white;
+    max-width: 1300px;
+    margin: 0 auto;
+    @media screen and (min-width: 1301px) {
+        border: $my-border;
+    }
+}
+
+.extra-margin {
+    margin-bottom: 20px;
+}
+
+header {
+    position: relative;
+    height: 200px;
+    max-width: 1300px;
+    background-color: $main-color;
+    z-index: 1;
+    font-family: 'Oswald', sans-serif;
+    .top-info {
+        padding: 10px;
+        background-color: $main-color;
+        height: auto;
+        .menu {
+            li {
+                padding-right: 0;
+            }
+            a {
+                font-size: 1em;
+                color: $white;
+                &:hover {
+                    color: lighten($main-color, 35%);
+                }
+            }
+        }
+        li {
+            padding-right: 15px;
+            color: $white;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        .button.hollow {
+            &:hover {
+              background: $white;
+              color: $main-color;
+              font-weight: bold;
+            }
+          }
+        .top-social {
+            .fab {
+                color: $white;
+                font-size: 2em;
+                padding-right: 15px;
+                &:hover {
+                    color: lighten($main-color, 35%);
+                } 
+            }
+        }
+        
+    }
+    svg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        max-width: 1300px;
+        height: 10vw;
+        max-height: 140px;
+        // -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+        // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+      }
+    
+      .logo-container {
+          position: absolute;
+          width: 150px;
+          height: 150px;
+          bottom: -50px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          padding: 22px 20px 20px 24px;
+          background-color: #fff;
+          border-radius: 2000px;
+          border: 1px solid $main-color;
+          overflow: hidden;
+          @include breakpoint(medium) {
+            bottom: -30px;
+          }
+          @include breakpoint(large) {
+            bottom: -12px;
+          }
+
+          .logo {
+              width: 160px;
+          }
+      }
+  }
+
+  .skewed {
+    height: 50px;
+    // background-image: url('../img/freddie-marriage-68449-unsplash.jpg');
+    // background-size: cover;
+    -webkit-transform: skewY(-6deg);
+    -ms-transform: skewY(-6deg);
+    transform: skewY(-6deg);
+    margin-top: 0;
+    z-index: 100;
+    .top-bar {
+        background-color: $white;
+        border: none;
+        margin-top: -40px;
+        .menu {
+            background-color: $white;
+            a {
+                color: $main-color;
+                font-size: 1.2em;
+                font-weight: bold;
+                @include breakpoint(small down) {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: $white;
+    margin: 0;
+    padding-top: 50px;
+    // padding: 0 30px;
+    .burger-cutout {
+        margin: 80px 0 20px 0;
+        @include breakpoint(medium) {
+            margin-top: 60px;
+          }
+          @include breakpoint(large) {
+            bottom: -30px;
+          }
+    }
+    .orbit {
+        .orbit-previous,
+        .orbit-next {
+            color: $main-color;
+        }
+        .orbit-bullets {
+            margin-top: 0;
+        }
+        .orbit-container {
+            position: relative;
+            // height: 450px;
+            // @include breakpoint(medium) {
+            //     height: 350px;
+            // }
+            // @include breakpoint(large) {
+            //     height: 410px;
+            // }
+            .orbit-figure {
+                height: 280px;
+                text-align: center;
+                @include breakpoint(medium) {
+                    height: 300px;
+                }
+                @include breakpoint(large) {
+                    height: 400px;
+                    text-align: right;
+                }
+                .orbit-slogan {
+                    position: absolute;
+                    left: 6%;
+                    top: 25%;
+                    // @media screen and (min-width: 700px) {
+                    //     left: 10%;
+                    // }
+                    @include breakpoint(large) {
+                        left: 12%;
+                    }
+                    @include breakpoint(xlarge) {
+                        left: 20%;
+                    }
+                    h3, h5 {
+                        font-family: 'Oswald', sans-serif;    
+                    }
+                    h5 {
+                        color: $main-color;
+                    }
+                    .orbit-button {
+                        margin-top: 20px;
+                        background-color: darken($main-color, 10%);
+                        a {
+                            color: $white;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                .orbit-image {
+                    height: 200px;
+                    width: auto;
+                    margin: 20px 0 0 0;
+                    @include breakpoint(medium) {
+                        height: 250px;
+                        margin-right: 40px;
+                    }
+                    @include breakpoint(large) {
+                        height: 320px;
+                        margin-right: 50px;
+                    }
+                    @include breakpoint(xlarge) {
+                        height: 350px;
+                        margin-right: 150px;
+                    }
+                }     
+                .pizza-slice {
+                    @include breakpoint(medium) {
+                        margin-right: 80px;
+                    }
+                    @include breakpoint(large) {
+                        margin-right: 120px;
+                    }
+
+                }   
+            }
+        }
+        .orbit-slogan-mobile {
+            margin-bottom: 40px;
+            h3, h5 {
+                font-family: 'Oswald', sans-serif;    
+            }
+            h5 {
+                color: $main-color;
+            }
+            .orbit-button {
+                margin-top: 20px;
+                margin-bottom: 30px;
+                background-color: darken($main-color, 10%);
+                a {
+                    color: $white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .food {
+        margin: 0 ;
+        padding: 0 0 10px 0;
+        .tabs {
+            margin: 0 auto;
+            padding: 40px 0 0;
+            .tabs-title {
+                width: 60px;
+                height: 60px;
+                margin: 0 30px 0 0;
+                float: none;
+                &:last-of-type {
+                    margin: 0;
+                }
+                @include breakpoint(medium down) {
+                    margin: 0 10px 0 0;
+                }
+                @include breakpoint(small down) {
+                    margin: 0;
+                }
+                    .food-icon {
+                        width: 40px;
+                        @include breakpoint(small down) {
+                            width: 30px;
+                        }
+                    }
+                .is-active {
+                    border: 1px solid $main-color;
+                }
+            }
+            .tabs-title > a {
+                width: 100%;
+                height: 100%;
+                // margin-right: 30px;
+                border-radius: 2000px;
+                @include breakpoint(small) {
+                    // width: 40px;
+                    // height: 40px;
+                    margin-right: 2px;
+                    padding: 3px;
+                }
+            }
+        }
+        .skewed-small-light {
+            height: 15px;
+            background-color: lighten($main-color, 30%);
+            -webkit-transform: skewY(-6deg);
+            -ms-transform: skewY(-6deg);
+            transform: skewY(-6deg);
+            margin-top: 30px;
+        }
+
+        .skewed-small {
+            height: 45px;
+            background-color: lighten($main-color, 10%);
+            -webkit-transform: skewY(-6deg);
+            -ms-transform: skewY(-6deg);
+            transform: skewY(-6deg);
+            margin-bottom: 40px;
+        }
+        .tabs-content {
+            margin: 40px 6% 20px;
+            padding: 0;
+            border-radius: $global-radius;
+            @include breakpoint(medium) {
+                padding: 0 20px 10px;
+            }
+            @include breakpoint(large) {
+                margin: 40px 15% 20px;
+            }
+            .tabs-panel {
+                margin: 0;
+                padding: 0;
+                h4 {
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+                .menu-container {    
+                    td {
+                        padding: 4px;
+                    }                
+                    @include breakpoint(medium up) {
+                        .size {
+                            width: 80px;
+                        }
+                    }   
+                    .menu-item-info {
+                        margin-bottom: 20px;
+                        p {
+                            font-style: italic;
+                            margin-bottom: 0;
+                            // &:first-of-type {
+                            //     margin-bottom: 0;
+                            // }
+                        }
+                        .button {
+                            margin-top: 15px;
+                            border-color: $main-color;
+                            color: darken($main-color, 20%);
+                            font-weight: bold;
+                            &:hover,
+                            &:active,
+                            &:focus {
+                                background-color: $main-color;
+                                color: $white;
+                            }
+                        }
+                        .hidden-info {
+                            display: none;
+                            width: 100%;
+                            margin-left: -15px;
+                            margin-right: -15px;
+                            padding: 15px;
+                            border-top: $my-border;
+                            border-bottom: $my-border;
+                            font-style: normal;
+                        }
+                        .fas {
+                            color: $main-color;
+                            margin-right: 6px;
+                        }
+
+                    }
+                    .food-name {
+                        font-weight: 500;
+                        .uppercase {
+                            text-transform: uppercase;
+                        }
+                    }
+                    .ingredients {
+                        color: darken($main-color, 10%);
+                        font-size: 90%;
+                    }
+                }
+                .sosy {
+                    margin-top: 40px;
+                    .cena {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $main-color;
+    height: 200px;
+}
+
+
+    
+  
+  
