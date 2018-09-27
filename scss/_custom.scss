@@ -372,7 +372,7 @@ main {
                         }
                     }
                     .ingredients {
-                        color: darken($main-color, 10%);
+                        color: darken($main-color, 15%);
                         font-size: 90%;
                     }
                 }
@@ -386,10 +386,120 @@ main {
         }
     }
 }
+.gallery-container {
+    height: 500px;
+    background-color: $white;
+    .arrow {
+        margin: 0 auto;
+        padding: 0;
+        background-color: $main-color;
+        &::before {
+            margin: 0 auto;
+            @include css-triangle(40px, $white, down);
+        }
+    }
+    h4 {
+        height: 80px;
+        padding: 30px 0 15px;
+        margin: 0;
+        background-color: $main-color;
+        color: $white;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include breakpoint(small only) {
+            height: 60px;
+            padding: 20px 0 10px;
+        }
+    }
+
+}
+
+.map {
+    .arrow {
+        margin: 0 auto;
+        padding: 0;
+        background-color: $main-color;
+        &::before {
+            margin: 0 auto;
+            @include css-triangle(40px, $white, down);
+        }
+    }
+    h4 {
+        height: 80px;
+        padding: 30px 0 15px;
+        margin: 0;
+        background-color: $main-color;
+        color: $white;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        @include breakpoint(small only) {
+            height: 60px;
+            padding: 20px 0 10px;
+        }
+
+    }
+    #map {
+    width: 100%;
+    height: 400px;
+    background-color: $white; 
+    padding: 0;
+    margin: 0; 
+    border-top: $my-border;   
+    border-bottom: $my-border;   
+    }
+}
 
 footer {
-    background-color: $main-color;
-    height: 200px;
+    background-color: $white;
+    overflow: hidden;
+    margin: 0;
+    .footer-info-container {
+        padding: 30px 0;
+        margin: 0;
+        background-color: $main-color;
+        // background-image: url("../img/white-wood.jpg");
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2em;
+        color: $black;
+        // font-weight: 600;
+        .footer-info {
+            margin: 0;
+            background-color: $white;
+            padding: 30px 50px;
+            border-top-right-radius: $global-radius;
+            border-bottom-right-radius: $global-radius;
+            @include breakpoint(small only) {
+                margin: 30px 10px;
+                border-radius: $global-radius;
+            }
+            .restaurant-name {
+                font-weight: 600;
+            }
+        }
+        .footer-slogan {
+            // background: -webkit-gradient(linear, left top, left bottom, from(rgba(94, 165, 183, 0.7)), to(rgba(94, 165, 183, 0.5))), url(../img/white-wood.jpg);
+            // background: -webkit-linear-gradient(rgba(94, 165, 183, 0.7), rgba(94, 165, 183, 0.5)), url(../img/white-wood.jpg);
+            // background-size: cover;
+            h5 {
+                color: $white;
+                font-size: 1.3em;
+            }
+            .button {
+                padding: 20px 50px;
+                background-color: $white;
+                &:hover {
+                    background-color: lighten($main-color, 40%);
+                    border: 1px solid $black;
+                }
+                a {
+                    color: $black;
+                    font-size: 1.3em;
+                }
+            }  
+        }    
+    }
 }
 
 

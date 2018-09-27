@@ -114,7 +114,181 @@ function openDivWithInfo() {
         hiddenInfoChef.style.display = "none";
     }
 
-
-
-
 }
+
+
+
+function initMap()   {   
+    var position = new google.maps.LatLng(50.120472, 18.397571);
+    var markerIcon = '../img/map-marker-black.png';
+    var content = '<div class="infowindow">Rybnicka 43,<br> 44-295 Lyski</div>'
+    var styles = [
+        {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "saturation": "0"
+                },
+                {
+                    "lightness": "100"
+                }
+            ]
+        },
+        {
+            "featureType": "landscape.man_made",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "visibility": "on"
+                },
+                {
+                    "lightness": "-12"
+                },
+                {
+                    "saturation": "-91"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.park",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "saturation": "0"
+                },
+                {
+                    "lightness": "6"
+                }
+            ]
+        },
+        {
+            "featureType": "poi.school",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "lightness": "27"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#eceaea"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#808080"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [
+                {
+                    "color": "#5b0202"
+                }
+            ]
+        },
+        {
+            "featureType": "road",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "weight": "5.98"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "geometry.fill",
+            "stylers": [
+                {
+                    "color": "#cccccc"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "geometry.stroke",
+            "stylers": [
+                {
+                    "color": "#000000"
+                }
+            ]
+        },
+        {
+            "featureType": "road.arterial",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "weight": "4.00"
+                },
+                {
+                    "saturation": "1"
+                },
+                {
+                    "gamma": "1.00"
+                },
+                {
+                    "color": "#ffffff"
+                }
+            ]
+        },
+        {
+            "featureType": "road.local",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+                {
+                    "color": "#ffffff"
+                },
+                {
+                    "weight": "2.84"
+                }
+            ]
+        },
+        {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+                {
+                    "lightness": "23"
+                }
+            ]
+        }
+    ];
+
+    var mapOptions = {
+        zoom: 15,
+        center: position,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        styles: styles,
+    };
+            
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions); 
+    var marker = new google.maps.Marker({
+            position: position, 
+            map: map,
+            icon: {
+                url: markerIcon,
+                // scaledSize: new google.maps.Size(48, 48)
+	       }      
+    });
+    
+   var infowindow = new google.maps.InfoWindow({
+       content: content,
+       maxWidth: 200,
+   });
+   
+   infowindow.open(map, marker);
+}   
+
+
