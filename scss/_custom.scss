@@ -387,7 +387,7 @@ main {
     }
 }
 .gallery-container {
-    height: 500px;
+    height: auto;
     background-color: $white;
     .arrow {
         margin: 0 auto;
@@ -412,6 +412,65 @@ main {
             padding: 20px 0 10px;
         }
     }
+    .gallery {
+        margin: 0 10px;
+        @include breakpoint(small only) {
+            margin: 0;
+        }
+        .main-img {
+            margin: auto;
+            padding: 40px 0;
+            @include breakpoint(small only) {
+                padding: 0 0 20px 0;
+            }
+    
+            img {
+                border-radius: $global-radius;
+                max-height: 500px;
+            }
+        }
+        .mini-img {
+            margin: auto;
+            ul {
+                margin: 20px auto;
+                img {
+                    border-radius: $global-radius;
+                    width: auto;
+                    height: 200px;
+                    margin: 5px;
+                    @include breakpoint(small only) {
+                        height: 100px;
+                    }            
+                }
+            }
+        }
+    }
+    .product-image-gallery {
+        background-color: $white;
+        padding: 1.5rem;
+      }
+      
+      .pdp-product-image {
+        margin-bottom: 20px;
+      }
+      
+      .product-thumbs {
+        
+        a {
+          margin-left: 8px;
+          margin-right: 8px;
+          padding: 0 !important;
+          
+          img {
+            @include thumbnail;
+            border-radius: $global-radius;
+            width: 80px;
+            height: 80px;
+            border: none;
+          }
+        }
+      }
+      
 
 }
 
