@@ -4,8 +4,29 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strona restauracji Grzechu Warte">
     <title>Grzechu Warte</title>
+    <link rel="shortcut icon" href="img/grzechu-warte-shorcut-icon.jpg">
+    <link rel="prefetch" href="img/grzechu-warte-logo.jpg">
+    <link rel="prefetch" href="img/img-tiny-jpg/burger2-round.jpg">
+    <link rel="prefetch" href="img/img-tiny-jpg/pizza-round2.jpg">
+    <link rel="prefetch" href="img/img-tiny-jpg/kids2-round.jpg">
+    <link rel="preload" href="webfonts/oswald-v16-latin-regular.eot" as="font" type="application/vnd.ms-fontobject" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-regular.svg" as="font" type="image/svg+xml" crossorigin>
+
+    <link rel="preload" href="webfonts/oswald-v16-latin-600.eot" as="font" type="application/vnd.ms-fontobject" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-600.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-600.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="webfonts/oswald-v16-latin-600.svg" as="font" type="image/svg+xml" crossorigin>
+
     <link rel="stylesheet" type="text/css" href="css/app.css">
+    
+    <!-- uzupełnić -->
+    <!-- <link rel="canonical" href="https://example.com"/> -->
   </head>
   <body>
     <header>
@@ -21,47 +42,38 @@
                   <li><a href="#kontakt">Kontakt</a></li>
               </ul>
             </div>
-            <div class="top-social cell small-2 medium-2 large-2 text-right"><a href="https://www.facebook.com/Grzechu-Warte-2211861392436989/" class="cell small-6 medium-6 large-6 align-self-middle text-right"><i class="fab fa-facebook-square"></i></a></div>
+            <div class="top-social cell small-2 medium-2 large-2 text-right "><a href="https://www.facebook.com/Grzechu-Warte-2211861392436989/" class="cell small-6 medium-6 large-6 align-self-middle text-right"><i class="fab fa-facebook-square"></i></a></div>
         </div>
         
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
         <polygon fill="#fff" points="0,100 100,0 100,100"/>
       </svg>
       <div class="logo-container text-center">
-        <img class="logo" src="img/grzechu-warte-logo.jpg" alt="">
+          <picture>
+              <source srcset="img/webp/grzechu-warte-logo.webp" type="image/webp">
+              <source srcset="img/grzechu-warte-logo.jpg" type="image/jpeg"> 
+              <img class="logo" src="img/grzechu-warte-logo.jpg" alt="Logo">
+          </picture>
       </div>
 
     </header>
-    <!-- <div class="skewed"> -->
-        <!-- <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-          </div> -->
-          
-          <!-- <div class="top-bar" id="example-menu">
-            <div class="top-bar-left">
-              <ul class="menu">
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Galeria</a></li>
-                <li><a href="#">Kontakt</a></li>
-              </ul>
-            </div>
-          </div> -->
-    <!-- </div> -->
 
     <main>
-      <!-- <div class="burger-cutout text-center">
-        <img src="img/burger-cutout.png" alt="">
-      </div> -->
       <div class="orbit text-right" role="region" aria-label="Burger i pizza" data-orbit>
           <div class="orbit-wrapper">
-            <div class="orbit-controls">
+            <div class="orbit-controls hide-for-small-only">
               <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
               <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
             </div>
             <ul class="orbit-container">
               <li class="is-active orbit-slide">
                 <figure class="orbit-figure">
-                  <img class="orbit-image" src="img/burger-round.png" alt="Burger">
+                    <picture>
+                        <source srcset="img/webp/burger2-round.webp" type="image/webp">
+                        <source srcset="img/img-tiny-jpg/burger2-round.jpg" type="image/jpeg"> 
+                        <img class="orbit-image" src="img/img-tiny-jpg/burger2-round.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/burger2-round-mobile.jpg, small], [../../img/img-tiny-jpg/medium/burger2-round-medium.jpg, medium], [../../img/img-tiny-jpg/burger2-round.jpg, large]" alt="Burger">
+                    </picture>
+                  <!-- <img class="orbit-image" src="img/burger-cutout-oryginal2-ed.png" alt="Burger"> -->
                   <div class="orbit-slogan text-center show-for-large">
                     <h3>Sześć burgerów do wyboru</h3>
                     <h5>Z wołowiną, wieprzowiną lub wege!</h5>
@@ -69,14 +81,19 @@
                   </div>
                 </figure>
                 <div class="hide-for-large orbit-slogan-mobile text-center">
-                  <h3>Sześć burgerów do wyboru.</h3>
+                  <h3>Sześć burgerów do wyboru</h3>
                   <h5>Z wołowiną, wieprzowiną lub wege!</h5>
                   <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
                 </div>
               </li>
               <li class="orbit-slide">
                 <figure class="orbit-figure">
-                  <img class="orbit-image" src="img/pizza2-cutout.png" alt="Pizza">
+                    <picture>
+                        <source srcset="img/webp/pizza-round2.webp" type="image/webp">
+                        <source srcset="img/img-tiny-jpg/pizza-round2.jpg" type="image/jpeg"> 
+                        <img class="orbit-image" src="img/img-tiny-jpg/pizza-round2.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/pizza-round2-mobile.jpg, small], [../../img/img-tiny-jpg/medium/pizza-round2-medium.jpg, medium], [../../img/img-tiny-jpg/pizza-round2.jpg, large]" alt="Pizza">
+                    </picture>
+                  <!-- <img class="orbit-image" src="img/pizza2-cutout.png" alt="Pizza"> -->
                   <div class="orbit-slogan text-center show-for-large">
                     <h3>Pyszna pizza, naturalne składniki</h3>
                     <h5>Wybierz sos i spód pizzy!</h5>
@@ -91,10 +108,14 @@
               </li>
               <li class="is-active orbit-slide">
                   <figure class="orbit-figure">
-                    <img class="orbit-image" src="img/img-tiny-jpg/kids2-round.png" alt="Kids room">
+                      <picture>
+                          <source srcset="img/webp/kids2-round.webp" type="image/webp">
+                          <source srcset="img/img-tiny-jpg/kids2-round.jpg" type="image/jpeg"> 
+                          <img class="orbit-image" src="img/img-tiny-img/kids2-round.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/kids2-round-mobile.jpg, small], [../../img/img-tiny-jpg/medium/kids2-round-medium.jpg, medium], [../../img/img-tiny-jpg/kids2-round.jpg, large]" alt="Kącik dla dzieci">
+                      </picture>
                     <div class="orbit-slogan text-center show-for-large">
                       <h3>Kącik herbaciany i miejsce dla dzieci</h3>
-                      <h5>Coś dla dużych i dla małych!</h5>
+                      <h5>Coś dla dużych i dla małych</h5>
                       <button class="button orbit-button" type="button"><a href="#galeria">Zobacz galerię</a></button>
                     </div>
                   </figure>
@@ -118,13 +139,13 @@
           <div class="skewed-small"></div>
     
           <ul class="tabs text-center grid-x grid-margin-x align-center" data-tabs id="menu-tabs">
-              <li id="pizza-tab" class="tabs-title is-active cell small-auto"><a href="#pizza" aria-selected="true"><img src="img/pizza-slice-color.png" class="food-icon" alt="" id="pizza-img"></a></li>
-              <li id="burgery-tab" class="tabs-title cell small-auto"><a data-tabs-target="burgery" href="#burgery"><img src="img/burger.png" class="food-icon" alt="" id="burgery-img"></a></li>
-              <li id="makarony-tab" class="tabs-title cell small-auto"><a data-tabs-target="makarony" href="#makarony"><img src="img/noodles.png" class="food-icon" alt="" id="makarony-img"></a></li>
-              <li id="sałatki-tab" class="tabs-title cell small-auto"><a data-tabs-target="sałatki" href="#sałatki"><img src="img/salad.png" class="food-icon" alt="" id="sałatki-img"></a></li>
-              <li id="dodatki-tab" class="tabs-title cell small-auto"><a data-tabs-target="dodatki" id="dodatki-a" href="#dodatki" ><img src="img/fried-potatoes.png" class="food-icon" alt="" id="dodatki-img"></a></li>
-              <li id="napoje-tab" class="tabs-title cell small-auto"><a data-tabs-target="napoje" href="#napoje"><img src="img/coffee-cup.png" class="food-icon" alt="" id="napoje-img"></a></li>
-              <li id="extra-tab" class="tabs-title cell small-auto"><a data-tabs-target="extra" href="#extra"><img src="img/chef-hat.png" class="food-icon" alt="" id="extra-img"></a></li>
+              <li id="pizza-tab" class="tabs-title is-active cell small-auto"><a href="#pizza" aria-selected="true"><img src="img/svg/pizza-slice.svg" class="food-icon" alt="Pizza" id="pizza-img"></a></li>
+              <li id="burgery-tab" class="tabs-title cell small-auto"><a data-tabs-target="burgery" href="#burgery"><img src="img/burger.png" class="food-icon" alt="Burgery" id="burgery-img"></a></li>
+              <li id="makarony-tab" class="tabs-title cell small-auto"><a data-tabs-target="makarony" href="#makarony"><img src="img/noodles.png" class="food-icon" alt="Makarony" id="makarony-img"></a></li>
+              <li id="sałatki-tab" class="tabs-title cell small-auto"><a data-tabs-target="sałatki" href="#sałatki"><img src="img/salad.png" class="food-icon" alt="Sałatki" id="sałatki-img"></a></li>
+              <li id="dodatki-tab" class="tabs-title cell small-auto"><a data-tabs-target="dodatki" id="dodatki-a" href="#dodatki" ><img src="img/fried-potatoes.png" class="food-icon" alt="Dodatki" id="dodatki-img"></a></li>
+              <li id="napoje-tab" class="tabs-title cell small-auto"><a data-tabs-target="napoje" href="#napoje"><img src="img/coffee-cup.png" class="food-icon" alt="Napoje" id="napoje-img"></a></li>
+              <li id="extra-tab" class="tabs-title cell small-auto"><a data-tabs-target="extra" href="#extra"><img src="img/chef-hat.png" class="food-icon" alt="Szef kuchni poleca" id="extra-img"></a></li>
           </ul>
           <div class="tabs-content" data-tabs-content="menu-tabs">
 
@@ -608,36 +629,140 @@
     <div class="gallery-container" id="galeria">
       <div class="arrow text-center"></div>
       <h4 class="text-center">Poznaj nas</h4>
-      <div class="gallery grid-x">
-        <div class="cell small-12 medium-12 large-4 main-img text-center">
-            <img id="main-product-image" src="img/img-tiny-jpg/inside.jpg" alt="">
+      <div class="gallery grid-x text-center">
+        <div class="cell small-12 medium-12 large-shrink main-img text-center">
+            <!-- <picture> -->
+                <!-- <source class="b-lazy" srcset="img/webp/inside.webp" type="image/webp"> -->
+                <!-- <source class="b-lazy" srcset="img/img-tiny-img/inside.jpg" type="image/jpeg">  -->
+                <!-- <img class="b-lazy" src="img/img-tiny-jpg/inside.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside-medium.jpg, medium], [../../img/img-tiny-jpg/inside.jpg, large]" alt="Wnętrze restauracji"> -->
+                <!-- <img id="main-product-image" class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/inside.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside-medium.jpg, medium], [../../img/img-tiny-jpg/inside.jpg, large]" alt="Wnętrze restauracji"> -->
+                <img id="main-product-image" src="img/img-tiny-jpg/inside.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside-medium.jpg, medium], [../../img/img-tiny-jpg/inside.jpg, large]" alt="Wnętrze restauracji">
+            </picture>
         </div>    
-        <div class="mini-img small-12 medium-12 large-8">
-            <ul class="menu product-thumbs align-center no-bullet">
-                <li><a class="sim-thumb text-center" data-image="img/img-tiny-jpg/inside3.jpg"><img src="img/img-tiny-jpg/inside3.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/outside.jpg"><img src="img/img-tiny-jpg/outside.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/outside2.jpg"><img src="img/img-tiny-jpg/outside2.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/bar.jpg"><img src="img/img-tiny-jpg/bar.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside5.jpg"><img src="img/img-tiny-jpg/inside5.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside6.jpg"><img src="img/img-tiny-jpg/inside6.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside7.jpg"><img src="img/img-tiny-jpg/inside7.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/kids.jpg"><img src="img/img-tiny-jpg/kids.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/kids2.jpg"><img src="img/img-tiny-jpg/kids2.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/burger.jpg"><img src="img/img-tiny-jpg/burger.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/deser.jpg"><img src="img/img-tiny-jpg/deser.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/deser3.jpg"><img src="img/img-tiny-jpg/deser3.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/deser4.jpg"><img src="img/img-tiny-jpg/deser4.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/pizza2.jpg"><img src="img/img-tiny-jpg/pizza2.jpg" alt=""></a></li>
-                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/pizza.jpg"><img src="img/img-tiny-jpg/pizza.jpg" alt=""></a></li>
+        <div class="mini-img small-12 medium-12 large-auto text-center">
+          <!-- SMALL PHOTOS -->
+            <ul class="menu product-thumbs text-center no-bullet">
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside3.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/inside3.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/inside3.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/inside3.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside3-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside3-medium.jpg, medium], [../../img/img-tiny-jpg/inside3.jpg, large]" alt="Wnętrze restauracji">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/outside.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/outside.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/outside.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/outside.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/outside-mobile.jpg, small], [../../img/img-tiny-jpg/medium/outside-medium.jpg, medium], [../../img/img-tiny-jpg/outside.jpg, large]" alt="Na zewnątrz restauracji">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/outside2.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/outside2.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/outside2.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/outside2.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/outside2-mobile.jpg, small], [../../img/img-tiny-jpg/medium/outside2-medium.jpg, medium], [../../img/img-tiny-jpg/outside2.jpg, large]" alt="Na zewnątrz restauracji">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/bar.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/bar.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/bar.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/bar.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/bar-mobile.jpg, small], [../../img/img-tiny-jpg/medium/bar-medium.jpg, medium], [../../img/img-tiny-jpg/bar.jpg, large]" alt="Bar">
+                    </picture>                
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside5.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/inside5.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/inside5.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/inside5.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside5-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside5-medium.jpg, medium], [../../img/img-tiny-jpg/inside5.jpg, large]" alt="Wnętrze restauracji">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside6.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/inside6.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/inside6.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/inside6.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside6-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside6-medium.jpg, medium], [../../img/img-tiny-jpg/inside6.jpg, large]" alt="Wnętrze restauracji">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/inside7.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/inside7.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/inside7.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/inside7.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/inside7-mobile.jpg, small], [../../img/img-tiny-jpg/medium/inside7-medium.jpg, medium], [../../img/img-tiny-jpg/inside7.jpg, large]" alt="Wnętrze restauracji">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/kids.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/kids.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/kids.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/kids.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/kids-mobile.jpg, small], [../../img/img-tiny-jpg/medium/kids-medium.jpg, medium], [../../img/img-tiny-jpg/kids.jpg, large]" alt="Kącik dla dzieci">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/kids2.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/kids2.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/kids2.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/kids2.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/kids2-mobile.jpg, small], [../../img/img-tiny-jpg/medium/kids2-medium.jpg, medium], [../../img/img-tiny-jpg/kids2.jpg, large]" alt="Kącik dla dzieci">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/burger.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/burger.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/burger.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/burger.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/burger-mobile.jpg, small], [../../img/img-tiny-jpg/medium/burger-medium.jpg, medium], [../../img/img-tiny-jpg/burger.jpg, large]" alt="Burger">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/deser.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/deser.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/deser.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/deser.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/deser-mobile.jpg, small], [../../img/img-tiny-jpg/medium/deser-medium.jpg, medium], [../../img/img-tiny-jpg/deser.jpg, large]" alt="Deser">
+                    </picture>                
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/deser3.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/deser3.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/deser3.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/deser3.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/deser3-mobile.jpg, small], [../../img/img-tiny-jpg/medium/deser3-medium.jpg, medium], [../../img/img-tiny-jpg/deser3.jpg, large]" alt="Deser">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/deser4.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/deser4.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/deser4.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/deser4.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/deser4-mobile.jpg, small], [../../img/img-tiny-jpg/medium/deser4-medium.jpg, medium], [../../img/img-tiny-jpg/deser4.jpg, large]" alt="Deser">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/img-tiny-jpg/pizza2.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/pizza2.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/img-tiny-img/pizza2.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/pizza2.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/pizza2-mobile.jpg, small], [../../img/img-tiny-jpg/medium/pizza2-medium.jpg, medium], [../../img/img-tiny-jpg/pizza2.jpg, large]" alt="Pizza">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/food/pizza.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/pizza.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/food/pizza.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/pizza.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/pizza-mobile.jpg, small], [../../img/img-tiny-jpg/medium/pizza-medium.jpg, medium], [../../img/img-tiny-jpg/pizza.jpg, large]" alt="Pizza">
+                    </picture>
+                </a></li>
+                <li><a class="sim-thumb" data-image="img/food/coffee.jpg">
+                    <picture>
+                        <source class="b-lazy" srcset="img/webp/coffee.webp" type="image/webp">
+                        <source class="b-lazy" srcset="img/food/coffee.jpg" type="image/jpeg"> 
+                        <img class="b-lazy" src="img/handtinytrans.gif" data-src="img/img-tiny-jpg/coffee.jpg" data-interchange="[../../img/img-tiny-jpg/mobile/coffee-mobile.jpg, small], [../../img/img-tiny-jpg/medium/coffee-medium.jpg, medium], [../../img/img-tiny-jpg/coffee.jpg, large]" alt="Kawa">
+                    </picture>
+                </a></li>
               </ul>
         </div>
       </div>
     </div>
     <!-- MAP -->
-    <div class="map">
+    <div class="map lazy-img">
       <div class="arrow text-center"></div>
       <h4 class="text-center">Tu jesteśmy</h4>
-      <div id="map"></div>
+      <div id="map" data-lat="50.120472" data-lng="18.397571" class="google-map"></div>
     </div>
 
     <footer>
@@ -648,7 +773,7 @@
               <p>44-295 Lyski</p>
             </div>
             <div class="footer-slogan cell small-12 medium-5 large-5 text-center align-self-middle">
-                <button class="button large"><a href="tel:+48695422928">790 850 580</a></button>
+                <button class="button large"><a href="tel:+48695422928"><i class="fas fa-phone"></i>790 850 580</a></button>
             </div>
         </div>
     </footer>
@@ -656,11 +781,198 @@
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="node_modules/what-input/dist/what-input.js"></script>
     <script src="node_modules/foundation-sites/dist/js/foundation.js"></script>
+    <!-- <script src="node_modules/foundation-sites/dist/js/plugins/foundation.core.min.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/plugins/foundation.interchange.min.js"></script>
+    <script src="node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.min.js"></script> -->
+
+
     <script src="js/app.js"></script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLZ5RzBQnOpjfK6wz78Z53SelZSdtSXYA&callback=initMap">
+    <script src="js/blazy.js"></script>
+    <script src="js/lazy-load-google-maps.js"></script>
+    <script>
+        ;( function( $, window, document, undefined )
+    {
+        $( '.google-map' ).lazyLoadGoogleMaps(
+        {
+            key: 'AIzaSyBLZ5RzBQnOpjfK6wz78Z53SelZSdtSXYA',
+            callback: function( container, map )
+            {
+                var $container  = $( container ),
+                    center      = new google.maps.LatLng( $container.attr( 'data-lat' ), $container.attr( 'data-lng' ) );
+ 
+                var content = '<div class="infowindow">Rybnicka 43,<br> 44-295 Lyski</div>';
+                var infowindow = new google.maps.InfoWindow({
+                      content: content,
+                      maxWidth: 200,
+                  });
+                var styles = [
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": "0"
+                            },
+                            {
+                                "lightness": "100"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "on"
+                            },
+                            {
+                                "lightness": "-12"
+                            },
+                            {
+                                "saturation": "-91"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.park",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": "0"
+                            },
+                            {
+                                "lightness": "6"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi.school",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "lightness": "27"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#eceaea"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#808080"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#5b0202"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "weight": "5.98"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "color": "#cccccc"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "geometry.stroke",
+                        "stylers": [
+                            {
+                                "color": "#000000"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "weight": "4.00"
+                            },
+                            {
+                                "saturation": "1"
+                            },
+                            {
+                                "gamma": "1.00"
+                            },
+                            {
+                                "color": "#ffffff"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels.text.stroke",
+                        "stylers": [
+                            {
+                                "color": "#ffffff"
+                            },
+                            {
+                                "weight": "2.84"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "lightness": "23"
+                            }
+                        ]
+                    }
+                ];
+
+                map.setOptions(
+                    { 
+                      zoom: 15, 
+                      center: center,
+                      mapTypeId: google.maps.MapTypeId.ROADMAP,
+                      styles: styles,
+                    }
+                );
+                const marker = new google.maps.Marker(
+                    { 
+                      position: center, 
+                      map: map,
+                      icon: {
+                          url: '../img/map-marker-black.png',
+                      }
+                    }
+                );
+              
+                infowindow.open(map, marker);  
+            }
+        });
+ 
+    })( jQuery, window, document );
+
     </script>
-
-
   </body>
 </html>

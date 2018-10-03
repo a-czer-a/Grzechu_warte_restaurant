@@ -65,10 +65,38 @@
 // CUSTOM VARIABLES
 
 $main-color: #5ea5b7;
+$matching-color: #5E76B7;
 $main-color-light: #f6fafb;
+$main-color-dark: #3e7b8a;
 $light-gray: #f5f5f5;
 $my-border: 1px solid $light-gray;
 
+        /* oswald-regular - latin */
+        @font-face {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 400;
+            src: url('../webfonts/oswald-v16-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local('Oswald Regular'), local('Oswald-Regular'),
+                url('../webfonts/oswald-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('../webfonts/oswald-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('../webfonts/oswald-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('../webfonts/oswald-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('../webfonts/oswald-v16-latin-regular.svg#Oswald') format('svg'); /* Legacy iOS */
+            }
+            /* oswald-600 - latin */
+            @font-face {
+            font-family: 'Oswald';
+            font-style: normal;
+            font-weight: 600;
+            src: url('../webfonts/oswald-v16-latin-600.eot'); /* IE9 Compat Modes */
+            src: local('Oswald SemiBold'), local('Oswald-SemiBold'),
+                url('../webfonts/oswald-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('../webfonts/oswald-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+                url('../webfonts/oswald-v16-latin-600.woff') format('woff'), /* Modern Browsers */
+                url('../webfonts/oswald-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('../webfonts/oswald-v16-latin-600.svg#Oswald') format('svg'); /* Legacy iOS */
+            }
 // 1. Global
 // ---------
 
@@ -831,7 +859,7 @@ $titlebar-color: $white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
 $titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color-hover: $black;
 $titlebar-icon-spacing: 0.25rem;
 
 // 54. Tooltip

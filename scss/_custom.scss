@@ -12,6 +12,19 @@ body {
     margin-bottom: 20px;
 }
 
+// B-LAZY
+.b-lazy {
+    -webkit-transition: opacity 500ms ease-in-out;
+       -moz-transition: opacity 500ms ease-in-out;
+         -o-transition: opacity 500ms ease-in-out;
+            transition: opacity 500ms ease-in-out;
+             max-width: 100%;
+               opacity: 0;
+}
+.b-lazy.b-loaded {
+               opacity: 1;
+}
+//
 header {
     position: relative;
     height: 200px;
@@ -23,15 +36,51 @@ header {
         padding: 10px;
         background-color: $main-color;
         height: auto;
-        .menu {
+        @include breakpoint(small only) {
+            padding: 10px 0;
+            height: 200px;
+            text-align: center;
+        }
+        .title-bar {
+            @include breakpoint(small only) {
+                margin-bottom: 10px;
+            }
+        }
+        .menu {    
+            @include breakpoint(small only) {
+                width: 100vw;
+                background-color: $black;
+                height: 400px;
+                z-index: 2000;
+            }
             li {
-                padding-right: 0;
+                padding: 0 0 5px 0;
+                margin: 6px;
+                &:hover {
+                    background-color: $main-color-dark; 
+                    border-radius: $global-radius;
+                }
+                @include breakpoint(small only) {
+                    margin: 10px 0;
+                    &:first-of-type {
+                        margin-top: 80px;
+                    }
+                }
+                @include breakpoint(medium down) {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: $main-color-dark;
+                    }
+                }
             }
             a {
-                font-size: 1em;
+                font-size: 1.2em;
                 color: $white;
-                &:hover {
-                    color: lighten($main-color, 35%);
+                padding: 10px;
+                @include breakpoint(small only) {
+                    font-size: 1.3em;
+                    padding: 18px 10px;
                 }
             }
         }
@@ -53,12 +102,12 @@ header {
                 color: $white;
                 font-size: 2em;
                 padding-right: 15px;
+                transition: all .3s ease-in;
                 &:hover {
-                    color: lighten($main-color, 35%);
+                    transform: scale(1.1);
                 } 
             }
         }
-        
     }
     svg {
         position: absolute;
@@ -67,40 +116,33 @@ header {
         max-width: 1300px;
         height: 10vw;
         max-height: 140px;
-        // -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
-        // box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
       }
-    
-      .logo-container {
-          position: absolute;
-          width: 150px;
-          height: 150px;
-          bottom: -50px;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          padding: 22px 20px 20px 24px;
-          background-color: #fff;
-          border-radius: 2000px;
-          border: 1px solid $main-color;
-          overflow: hidden;
-          @include breakpoint(medium) {
-            bottom: -30px;
-          }
-          @include breakpoint(large) {
-            bottom: -12px;
-          }
-
-          .logo {
-              width: 160px;
-          }
-      }
+    .logo-container {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 22px 20px 20px 24px;
+        background-color: #fff;
+        border-radius: 2000px;
+        border: 1px solid $main-color;
+        overflow: hidden;
+        @include breakpoint(medium) {
+        bottom: -30px;
+        }
+        @include breakpoint(large) {
+        bottom: -12px;
+        }
+        .logo {
+            width: 160px;
+        }
+    }
   }
-
   .skewed {
     height: 50px;
-    // background-image: url('../img/freddie-marriage-68449-unsplash.jpg');
-    // background-size: cover;
     -webkit-transform: skewY(-6deg);
     -ms-transform: skewY(-6deg);
     transform: skewY(-6deg);
@@ -113,7 +155,7 @@ header {
         .menu {
             background-color: $white;
             a {
-                color: $main-color;
+                color: $main-color-dark;
                 font-size: 1.2em;
                 font-weight: bold;
                 @include breakpoint(small down) {
@@ -128,16 +170,6 @@ main {
     background-color: $white;
     margin: 0;
     padding-top: 30px;
-    // padding: 0 30px;
-    // .burger-cutout {
-    //     margin: 80px 0 20px 0;
-    //     @include breakpoint(medium) {
-    //         margin-top: 60px;
-    //       }
-    //       @include breakpoint(large) {
-    //         bottom: -30px;
-    //       }
-    // }
     .orbit {
         .orbit-previous,
         .orbit-next {
@@ -148,15 +180,9 @@ main {
         }
         .orbit-container {
             position: relative;
-            // height: 450px;
-            // @include breakpoint(medium) {
-            //     height: 350px;
-            // }
-            // @include breakpoint(large) {
-            //     height: 410px;
-            // }
+            font-family: 'Oswald', 'PT Sans', sans-serif;
             .orbit-figure {
-                height: 280px;
+                height: 260px;
                 text-align: center;
                 @include breakpoint(medium) {
                     height: 300px;
@@ -169,9 +195,6 @@ main {
                     position: absolute;
                     left: 6%;
                     top: 25%;
-                    // @media screen and (min-width: 700px) {
-                    //     left: 10%;
-                    // }
                     @include breakpoint(large) {
                         left: 12%;
                     }
@@ -182,14 +205,21 @@ main {
                         font-family: 'Oswald', 'PT Sans', sans-serif;
                     }
                     h5 {
-                        color: $main-color;
+                        color: $main-color-dark;
                     }
                     .orbit-button {
+                        width: 150px;
                         margin-top: 20px;
-                        background-color: darken($main-color, 10%);
+                        background-color: $black;
+                        &:hover,
+                        &:active,
+                        &:focus {
+                            background-color: $main-color-dark;
+                        }
                         a {
                             color: $white;
                             font-weight: bold;
+                            font-size: 1.2em;
                         }
                     }
                 }
@@ -197,12 +227,13 @@ main {
                     height: 200px;
                     width: auto;
                     margin: 0;
-                    @include breakpoint(small only) {
+                    @include breakpoint(medium down) {
                         margin-top: 50px;
+                        padding-bottom: 30px;
                     }
                     @include breakpoint(medium) {
                         height: 250px;
-                        margin-right: 80px;
+                        // margin-right: 80px;
                     }
                     @include breakpoint(large) {
                         height: 320px;
@@ -221,14 +252,16 @@ main {
                 font-family: 'Oswald', 'PT Sans', sans-serif;
             }
             h5 {
-                color: $main-color;
+                color: $main-color-dark;
             }
             .orbit-button {
+                width: 150px;
                 margin-top: 20px;
                 margin-bottom: 30px;
-                background-color: darken($main-color, 10%);
+                background-color: $black;
                 a {
                     color: $white;
+                    font-size: 1.2em;
                     font-weight: bold;
                 }
             }
@@ -239,12 +272,16 @@ main {
         margin: 0 ;
         padding: 0 0 10px 0;
         .tabs {
-            margin: 0 auto;
+            margin: 0;
             padding: 40px 0 0;
+            @include breakpoint(small only) {
+                width: 95%;
+                margin: 0 auto;
+            }
             .tabs-title {
                 width: 60px;
                 height: 60px;
-                margin: 0 30px 0 0;
+                margin: 0 40px 0 0;
                 float: none;
                 &:last-of-type {
                     margin: 0;
@@ -268,11 +305,8 @@ main {
             .tabs-title > a {
                 width: 100%;
                 height: 100%;
-                // margin-right: 30px;
                 border-radius: 2000px;
                 @include breakpoint(small) {
-                    // width: 40px;
-                    // height: 40px;
                     margin-right: 2px;
                     padding: 3px;
                 }
@@ -288,15 +322,15 @@ main {
         }
 
         .skewed-small {
-            height: 45px;
-            background-color: lighten($main-color, 10%);
+            height: 65px;
+            background-color: $main-color;
             -webkit-transform: skewY(-6deg);
             -ms-transform: skewY(-6deg);
             transform: skewY(-6deg);
             margin-bottom: 40px;
         }
         .tabs-content {
-            margin: 40px 6% 20px;
+            margin: 20px 6%;
             padding: 0;
             border-radius: $global-radius;
             @include breakpoint(medium) {
@@ -327,19 +361,16 @@ main {
                         p {
                             font-style: italic;
                             margin-bottom: 0;
-                            // &:first-of-type {
-                            //     margin-bottom: 0;
-                            // }
                         }
                         .button {
                             margin-top: 15px;
-                            border-color: $main-color;
-                            color: darken($main-color, 20%);
+                            border-color: $main-color-dark;
+                            color: $main-color-dark;
                             font-weight: bold;
                             &:hover,
                             &:active,
                             &:focus {
-                                background-color: $main-color;
+                                background-color: $main-color-dark;
                                 color: $white;
                             }
                         }
@@ -354,7 +385,7 @@ main {
                             font-style: normal;
                         }
                         .fas {
-                            color: $main-color;
+                            color: $black;
                             margin-right: 6px;
                         }
 
@@ -366,8 +397,9 @@ main {
                         }
                     }
                     .ingredients {
-                        color: darken($main-color, 15%);
+                        color: $main-color-dark;
                         font-size: 90%;
+                        font-weight: 500;
                     }
                 }
                 .sosy {
@@ -393,8 +425,8 @@ main {
         }
     }
     h4 {
-        height: 80px;
-        padding: 30px 0 15px;
+        height: 70px;
+        padding: 20px 0 15px;
         margin: 0;
         background-color: $main-color;
         color: $white;
@@ -407,43 +439,47 @@ main {
         }
     }
     .gallery {
-        margin: 0 10px;
+        margin: 40px;
         overflow: hidden;
-        @include breakpoint(small only) {
-            margin: 0;
+        @include breakpoint(medium down) {
+            margin: 10px 10px 15px 10px;
         }
         .main-img {
             margin: 20px auto 0;
             padding: 0;
-            @include breakpoint(small only) {
-                padding: 0 0 20px 0;
+            @include breakpoint(medium down) {
+                max-height: 380px;
             }
             img {
                 border-radius: $global-radius;
-                max-height: 550px;
-                @include breakpoint(small only) {
-                    max-height: 400px;
+                @include breakpoint(medium down) {
+                    max-height: 380px;
                 }
-    
             }
         }
         .mini-img {
-            margin: auto;
+            margin: 20px auto 0;
+            @include breakpoint(medium up) {
+                max-width: 720px;
+            }
             ul {
-                margin: 20px auto;
+                margin: 0 auto;
                 overflow: hidden;
-                @include breakpoint(small only) {
-                    margin: 5px 0 15px;
+                @include breakpoint(medium only) {
+                    margin: 5px 0 0;
                 }
                 li {
-                    width: 170px;
-                    height: 170px;
+                    width: 150px;
+                    height: 150px;
                     overflow: hidden;
-                    margin: 5px;
+                    margin: 0 0 20px auto;
                     @include breakpoint(small only) {
-                        width: 100px;
-                        height: 100px;
-                    }            
+                        width: 90px;
+                        height: 90px;
+                    }     
+                    @include breakpoint(medium down) {
+                        margin: 10px auto;
+                    }       
                     a {
                         width: 170px;
                         height: 170px;
@@ -476,8 +512,8 @@ main {
         }
     }
     h4 {
-        height: 80px;
-        padding: 30px 0 15px;
+        height: 70px;
+        padding: 20px 0 15px;
         margin: 0;
         background-color: $main-color;
         color: $white;
@@ -502,11 +538,10 @@ main {
 }
 
 footer {
-    background-color: $white;
     overflow: hidden;
     margin: 0;
     .footer-info-container {
-        padding: 30px 0;
+        padding: 40px 0;
         margin: 0;
         background-color: $main-color;
         font-family: 'Oswald', 'PT Sans', sans-serif;
@@ -524,12 +559,10 @@ footer {
             }
             .restaurant-name {
                 font-weight: 600;
+                font-size: 120%;
             }
         }
         .footer-slogan {
-            // background: -webkit-gradient(linear, left top, left bottom, from(rgba(94, 165, 183, 0.7)), to(rgba(94, 165, 183, 0.5))), url(../img/white-wood.jpg);
-            // background: -webkit-linear-gradient(rgba(94, 165, 183, 0.7), rgba(94, 165, 183, 0.5)), url(../img/white-wood.jpg);
-            // background-size: cover;
             h5 {
                 color: $white;
                 font-size: 1.3em;
@@ -544,6 +577,9 @@ footer {
                 a {
                     color: $black;
                     font-size: 1.3em;
+                    .fas {
+                        margin-right: 15px;
+                    }
                 }
             }  
         }    
