@@ -1,0 +1,28 @@
+{
+    "name": "Restauracja Grzechu Warte",
+    "short_name": "Grzechu Warte",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "description": "Strona restauracji Grzechu Warte",
+    "dir": "ltr",
+    "lang": "pl",
+    "icons": [
+        {
+          "src": "img/grzechu-warte-big.jpg",
+          "type": "image/jpeg",
+          "size": "480x480"
+        },
+        {
+          "src": "img/grzechu-warte-logo.jpg",
+          "type": "image/jpeg",
+          "size": "186x187"
+        },
+        {
+          "src": "img/grzechu-warte-shorcut-icon.jpg",
+          "type": "image/jpeg",
+          "size": "28x28"
+        }
+      ]
+  }

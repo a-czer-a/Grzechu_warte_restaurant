@@ -71,32 +71,30 @@ $main-color-dark: #3e7b8a;
 $light-gray: #f5f5f5;
 $my-border: 1px solid $light-gray;
 
-        /* oswald-regular - latin */
-        @font-face {
-            font-family: 'Oswald';
-            font-style: normal;
-            font-weight: 400;
-            src: url('../webfonts/oswald-v16-latin-regular.eot'); /* IE9 Compat Modes */
-            src: local('Oswald Regular'), local('Oswald-Regular'),
-                url('../webfonts/oswald-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('../webfonts/oswald-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-                url('../webfonts/oswald-v16-latin-regular.woff') format('woff'), /* Modern Browsers */
-                url('../webfonts/oswald-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('../webfonts/oswald-v16-latin-regular.svg#Oswald') format('svg'); /* Legacy iOS */
-            }
-            /* oswald-600 - latin */
-            @font-face {
-            font-family: 'Oswald';
-            font-style: normal;
-            font-weight: 600;
-            src: url('../webfonts/oswald-v16-latin-600.eot'); /* IE9 Compat Modes */
-            src: local('Oswald SemiBold'), local('Oswald-SemiBold'),
-                url('../webfonts/oswald-v16-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('../webfonts/oswald-v16-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-                url('../webfonts/oswald-v16-latin-600.woff') format('woff'), /* Modern Browsers */
-                url('../webfonts/oswald-v16-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('../webfonts/oswald-v16-latin-600.svg#Oswald') format('svg'); /* Legacy iOS */
-            }
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Oswald Regular'), local('Oswald-Regular'), url(https://fonts.gstatic.com/s/oswald/v16/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Oswald SemiBold'), local('Oswald-SemiBold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-xhsTus9CAZek1w.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PT Sans'), local('PTSans-Regular'), url(https://fonts.gstatic.com/s/ptsans/v9/jizaRExUiTo99u79D0KExcOPIDU.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 // 1. Global
 // ---------
 
@@ -116,7 +114,7 @@ $black: #0a0a0a;
 $white: #fff;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Oswald', 'PT Sans', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
