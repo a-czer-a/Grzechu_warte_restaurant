@@ -23,21 +23,92 @@ body {
 .b-lazy.b-loaded {
                opacity: 1;
 }
-//
+
+// LOADER 
+.js .load,
+.js #loader-wrapper {
+    display: block;
+}
+#loader-wrapper {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    // display: none;
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        margin: 0;
+        width: 90px;
+        text-align: center;
+        .bounce1 {
+            -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s;
+          }
+        .bounce2 {
+            -webkit-animation-delay: -0.16s;
+            animation-delay: -0.16s;
+        }
+    }
+    .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: $main-color-dark;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }  
+      
+      @-webkit-keyframes sk-bouncedelay {
+        0%, 80%, 100% { -webkit-transform: scale(0) }
+        40% { -webkit-transform: scale(1.0) }
+      }
+      
+      @keyframes sk-bouncedelay {
+        0%, 80%, 100% { 
+          -webkit-transform: scale(0);
+          transform: scale(0);
+        } 40% { 
+          -webkit-transform: scale(1.0);
+          transform: scale(1.0);
+        }
+      }
+    }
+
+// HEADER
 header {
     position: relative;
-    height: 200px;
+    height: 190px;
     max-width: 1300px;
     background-color: $main-color;
     z-index: 1;
     font-family: 'Oswald', 'PT Sans', sans-serif;
+    @include breakpoint(xlarge) {
+        height: 210px;
+    }
+    @include breakpoint(medium) {
+        height: 180px;
+    }
+    @include breakpoint(small only) {
+        height: 140px;
+    }
+
     .top-info {
         padding: 10px;
         background-color: $main-color;
         height: auto;
         @include breakpoint(small only) {
             padding: 10px 0;
-            height: 200px;
+            height: 140px;
             text-align: center;
         }
         .title-bar {
@@ -48,16 +119,19 @@ header {
         .menu {    
             @include breakpoint(small only) {
                 width: 100vw;
-                background-color: $black;
-                height: 400px;
+                background-color: $main-color-dark;
+                height: 460px;
                 z-index: 2000;
             }
             li {
-                padding: 0 0 5px 0;
+                padding: 0 0 3px 0;
                 margin: 6px;
                 &:hover {
                     background-color: $main-color-dark; 
                     border-radius: $global-radius;
+                    @include breakpoint(small only) {
+                        background-color: $main-color;
+                    }
                 }
                 @include breakpoint(small only) {
                     margin: 10px 0;
@@ -74,11 +148,12 @@ header {
                 }
             }
             a {
-                font-size: 1.2em;
+                font-size: 1em;
+                font-weight: 600;
                 color: $white;
                 padding: 10px;
                 @include breakpoint(small only) {
-                    font-size: 1.3em;
+                    font-size: 1.1em;
                     padding: 18px 10px;
                 }
             }
@@ -114,7 +189,8 @@ header {
         width: 100%;
         max-width: 1300px;
         height: 10vw;
-        max-height: 140px;
+        border: 0;
+        max-height: 145px;
       }
     .logo-container {
         position: absolute;
@@ -129,11 +205,15 @@ header {
         border-radius: 2000px;
         border: 1px solid $main-color;
         overflow: hidden;
+        @include breakpoint(small) {
+            width: 135px;
+            height: 135px;
+        }    
         @include breakpoint(medium) {
-        bottom: -30px;
+            bottom: -30px;
         }
         @include breakpoint(large) {
-        bottom: -12px;
+            bottom: -12px;
         }
         .logo {
             width: 160px;
@@ -156,7 +236,7 @@ header {
             a {
                 color: $main-color-dark;
                 font-size: 1.2em;
-                font-weight: bold;
+                font-weight: 600;
                 @include breakpoint(small down) {
                     padding: 0;
                 }
@@ -181,13 +261,13 @@ main {
             position: relative;
             font-family: 'Oswald', 'PT Sans', sans-serif;
             .orbit-figure {
-                height: 260px;
+                height: 230px;
                 text-align: center;
                 @include breakpoint(medium) {
-                    height: 300px;
+                    height: 260px;
                 }
                 @include breakpoint(large) {
-                    height: 370px;
+                    height: 350px;
                     text-align: right;
                 }
                 .orbit-slogan {
@@ -198,7 +278,7 @@ main {
                         left: 9%;
                     }
                     @include breakpoint(xlarge) {
-                        left: 15%;
+                        left: 12%;
                     }
                     h3, h5 {
                         font-family: 'Oswald', 'PT Sans', sans-serif;
@@ -208,22 +288,28 @@ main {
                     }
                     .orbit-button {
                         width: 150px;
+                        padding: 15px;
                         margin-top: 20px;
-                        background-color: $black;
+                        background-color: $yellowish;
+                        a {
+                            color: $black;
+                            font-weight: 600;
+                            font-size: 1.2em;
+                        }
                         &:hover,
                         &:active,
                         &:focus {
                             background-color: $main-color-dark;
                         }
-                        a {
+                        &:hover > a,
+                        &:active > a,
+                        &:focus > a {
                             color: $white;
-                            font-weight: 600;
-                            font-size: 1.2em;
                         }
                     }
                 }
                 .orbit-image {
-                    height: 150px;
+                    height: 220px;
                     width: auto;
                     margin: 30px 0 0 0;
                     @include breakpoint(medium down) {
@@ -249,9 +335,21 @@ main {
                     width: 500px;
                     margin-top: 80px;
                     @include breakpoint(medium down) {
-                        margin-top: 70px;
+                        width: 390px;
+                        margin-top: 50px;
                         padding-bottom: 30px;
                     }
+                    @include breakpoint(medium) {
+                        width: 450px;
+                    }
+                    @include breakpoint(large) {
+                        width: 500px;
+                    }
+                    @include breakpoint(xlarge) {
+                        width: 600px;
+                    }
+
+
                 }
             }
         }
@@ -260,18 +358,29 @@ main {
             h3, h5 {
                 font-family: 'Oswald', 'PT Sans', sans-serif;
             }
+            h3 {
+                font-size: 1.5em;
+                    @include breakpoint(medium only) {
+                        font-size: 2.2em;
+                    }
+            }
             h5 {
                 color: $main-color-dark;
+                @include breakpoint(medium only) {
+                    font-size: 1.5em;
+                }
+
             }
             .orbit-button {
                 width: 150px;
                 margin-top: 20px;
                 margin-bottom: 30px;
-                background-color: $black;
+                background-color: $yellowish;
                 a {
-                    color: $white;
+                    color: $black;
                     font-size: 1.2em;
-                    font-weight: bold;
+                    font-weight: 600;
+                    text-transform: uppercase;
                 }
             }
         }
@@ -282,9 +391,9 @@ main {
         padding: 0 0 10px 0;
         .tabs {
             margin: 0;
-            padding: 40px 0 0;
+            padding: 30px 0 15px;
             @include breakpoint(small only) {
-                width: 95%;
+                width: 90%;
                 margin: 0 auto;
             }
             .tabs-title {
@@ -299,11 +408,11 @@ main {
                 &:last-of-type {
                     margin: 0;
                 }
-                @include breakpoint(medium down) {
-                    margin: 0 10px 0 0;
+                @include breakpoint(medium) {
+                    margin: 0 15px 0 0;
                 }
                 @include breakpoint(small down) {
-                    margin: 0;
+                    margin: 4px 8px 0;
                 }
                     .food-icon {
                         width: 40px;
@@ -311,9 +420,6 @@ main {
                             width: 30px;
                         }
                     }
-                // .is-active {
-                //     border: 1px solid $main-color;
-                // }
             }
             .tabs-title > a {
                 // width: 100%;
@@ -324,10 +430,22 @@ main {
                     padding: 3px;
                 }
             }
+            .tabs-title > * {
+                pointer-events: none;
+            }
+            .is-active > a > svg > path {
+                fill: $main-color-dark;
+            }
+            .is-active > a > svg > g > g {
+                fill: $main-color-dark;
+            }
+
         }
         .skewed-small-light {
             height: 15px;
             background-color: lighten($main-color, 30%);
+            // background-color: $yellowish;
+
             -webkit-transform: skewY(-6deg);
             -ms-transform: skewY(-6deg);
             transform: skewY(-6deg);
@@ -379,11 +497,12 @@ main {
                             margin-top: 15px;
                             border-color: $main-color-dark;
                             color: $main-color-dark;
-                            font-weight: bold;
+                            font-weight: 600;
                             &:hover,
                             &:active,
                             &:focus {
-                                background-color: $main-color-dark;
+                                background-color: $main-color;
+                                border-color: $main-color;
                                 color: $white;
                             }
                         }
@@ -404,7 +523,7 @@ main {
 
                     }
                     .food-name {
-                        font-weight: 500;
+                        font-weight: 600;
                         .uppercase {
                             text-transform: uppercase;
                         }
@@ -434,28 +553,28 @@ main {
         background-color: $main-color;
         &::before {
             margin: 0 auto;
-            @include css-triangle(40px, $white, down);
+            @include css-triangle(20px, $white, down);
         }
     }
     h4 {
-        height: 70px;
-        padding: 20px 0 15px;
+        height: 60px;
+        padding: 15px 0 10px;
         margin: 0;
         background-color: $main-color;
         color: $white;
         font-family: 'Oswald', 'PT Sans', sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         @include breakpoint(small only) {
-            height: 60px;
-            padding: 20px 0 10px;
+            height: 50px;
+            padding: 15px 0 8px;
         }
     }
     .gallery {
-        margin: 40px;
+        margin: 40px 80px;
         overflow: hidden;
         @include breakpoint(medium down) {
-            margin: 10px 10px 15px 10px;
+            margin: 10px 15px 15px 15px;
         }
         .main-img {
             margin: 20px auto 0;
@@ -464,7 +583,6 @@ main {
                 max-height: 380px;
             }
             img {
-                border-radius: $global-radius;
                 @include breakpoint(medium down) {
                     max-height: 380px;
                 }
@@ -473,7 +591,7 @@ main {
         .mini-img {
             margin: 20px auto 0;
             @include breakpoint(medium up) {
-                max-width: 720px;
+                max-width: 800px;
             }
             ul {
                 margin: 0 auto;
@@ -481,27 +599,30 @@ main {
                 @include breakpoint(medium only) {
                     margin: 5px 0 0;
                 }
+                @include breakpoint(small only) {
+                    margin: 0 auto;
+                }
                 li {
-                    width: 150px;
-                    height: 150px;
+                    width: 21%;
+                    // height: 150px;
                     overflow: hidden;
                     margin: 0 0 20px auto;
                     @include breakpoint(small only) {
-                        width: 90px;
-                        height: 90px;
+                        width: 43%;
+                        // height: 90px;
                     }     
                     @include breakpoint(medium down) {
                         margin: 10px auto;
                     }       
                     a {
-                        width: 170px;
-                        height: 170px;
+                        width: 100%;
+                        height: 100%;
                         overflow: hidden;
                         padding: 0;
                         margin: 0;
                         @include breakpoint(small only) {
-                            width: 100px;
-                            height: 100px;
+                            width: 100%;
+                            height: 100%;
                         }  
                         img {
                             width: 100%;
@@ -521,21 +642,21 @@ main {
         background-color: $main-color;
         &::before {
             margin: 0 auto;
-            @include css-triangle(40px, $white, down);
+            @include css-triangle(25px, $white, down);
         }
     }
     h4 {
-        height: 70px;
-        padding: 20px 0 15px;
+        height: 60px;
+        padding: 15px 0 10px;
         margin: 0;
         background-color: $main-color;
         color: $white;
         font-family: 'Oswald', 'PT Sans', sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         text-transform: uppercase;
         @include breakpoint(small only) {
-            height: 60px;
-            padding: 20px 0 10px;
+            height: 50px;
+            padding: 15px 0 8px;
         }
 
     }
@@ -550,52 +671,133 @@ main {
     }
 }
 
+.separator {
+    width: 100%;
+    padding: 80px 0;
+    background-image: url('../img/pattern.jpg');
+    background-color: $yellowish;
+    text-align: center;
+    @include breakpoint(small only) {
+        padding: 60px 40px 50px;
+    }
+    h4 {
+        color: $white;
+        font-weight: 600;
+        text-transform: uppercase;
+        span {
+            text-decoration: underline;
+        }
+    }
+}
+
 footer {
     overflow: hidden;
     margin: 0;
     .footer-info-container {
-        padding: 40px 0;
-        margin: 0;
-        background-color: $main-color;
+        padding: 30px 0;
+        margin: 0 auto;
+        background-color: $white;
         font-family: 'Oswald', 'PT Sans', sans-serif;
         font-size: 1.2em;
         color: $black;
+        @include breakpoint(small only) {
+            padding: 0 0 25px;
+        }
+        @include breakpoint(large) {
+            padding: 40px 0;
+        }
+
+
         .footer-info {
             margin: 0;
+            padding: 0;
             background-color: $white;
-            padding: 30px 50px;
-            border-top-right-radius: $global-radius;
-            border-bottom-right-radius: $global-radius;
             @include breakpoint(small only) {
-                margin: 30px 10px;
-                border-radius: $global-radius;
+                margin: 30px 0 20px;
+                padding: 0;
             }
-            .restaurant-name {
-                font-weight: 600;
-                font-size: 120%;
+            .footer-logo {
+                width: 100px;
+                margin-bottom: 20px;
+            }
+            p:last-of-type {
+                margin: 0;
             }
         }
+        .time {
+            color: $main-color-dark;
+            padding: 5px 0;
+            border-left: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
+            @include breakpoint(small) {
+                border: 0;
+            }
+            .days {
+                margin: 0;
+            }
+            .clock {
+                width: 40px;
+                height: auto;
+                margin-right: 15px;
+            }
+        }
+
         .footer-slogan {
             h5 {
                 color: $white;
                 font-size: 1.3em;
             }
             .button {
-                padding: 20px 50px;
-                background-color: $white;
-                &:hover {
-                    background-color: lighten($main-color, 40%);
-                    border: 1px solid $black;
+                padding: 20px 30px;
+                background-color: $yellowish;
+                margin: 0;
+                @include breakpoint(small only) {
+                    margin-top: 20px;
                 }
+                @include breakpoint(medium only) {
+                    padding: 20px 12px;
+                }
+
+                &:hover {
+                    background-color: lighten($yellowish, 5%);
+                    -webkit-transform: skew(-15deg);
+                    -ms-transform: skew(-15deg);
+                    transform: skew(-15deg);
+                    -webkit-transition: .5s ease-in-out;
+                    -o-transition: .5s ease-in-out;
+                    transition: .5s ease-in-out;
+                }
+                &:hover > a {
+                    -webkit-transform: skew(15deg);
+                -ms-transform: skew(15deg);
+                transform: skew(15deg);
+                -webkit-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+
+            }
                 a {
+                    display: inline-block;
                     color: $black;
                     font-size: 1.3em;
+                    @include breakpoint(medium) {
+                        font-size: 1.1em;
+                    }
                     .fas {
-                        margin-right: 15px;
+                        margin-right: 25px;
+                        @include breakpoint(medium) {
+                            margin-right: 15px;                        
+                        }    
                     }
                 }
-            }  
+            }
         }    
+    }
+    .designer {
+        background-color: $main-color;
+        color: $light-gray;
+        font-size: 0.8em;
+        padding: 8px 0;
     }
 }
 
