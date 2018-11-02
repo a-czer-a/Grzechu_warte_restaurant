@@ -64,11 +64,8 @@
 
 // CUSTOM VARIABLES
 
-// $main-color: #5ea5b7;
-$main-color: #5ca4b4;
+$main-color: #5ea5b7;
 $matching-color: #5E76B7;
-$yellowish: #ffc338;
-// $yellowish: #ffc02d;
 $main-color-light: #f6fafb;
 $main-color-dark: #3e7b8a;
 $light-gray: #f5f5f5;
@@ -90,14 +87,6 @@ $my-border: 1px solid $light-gray;
   src: local('Oswald SemiBold'), local('Oswald-SemiBold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-xhsTus9CAZek1w.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-@font-face {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Oswald Bold'), local('Oswald-Bold'), url(https://fonts.gstatic.com/s/oswald/v16/TK3hWkUHHAIjg75-ohoTus9CAZek1w.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;

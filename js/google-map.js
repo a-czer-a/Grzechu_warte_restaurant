@@ -171,7 +171,7 @@
                       position: center, 
                       map: map,
                       icon: {
-                          url: '../img/location-pin.png',
+                          url: '../img/map-marker-black.png',
                       }
                     }
                 );
