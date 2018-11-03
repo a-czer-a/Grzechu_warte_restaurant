@@ -51,6 +51,7 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import 'mixins';
 @import 'custom';
 @import '../fontawesome/scss/fontawesome.scss';
 @import '../fontawesome/scss/solid.scss';

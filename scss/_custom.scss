@@ -21,7 +21,7 @@ body {
                opacity: 0;
 }
 .b-lazy.b-loaded {
-               opacity: 1;
+    opacity: 1;
 }
 
 // LOADER 
@@ -38,7 +38,7 @@ body {
     right: 0;
     z-index: 1000;
     background: #fff;
-    // display: none;
+    display: none;
     .spinner {
         position: absolute;
         top: 50%;
@@ -57,16 +57,25 @@ body {
             -webkit-animation-delay: -0.16s;
             animation-delay: -0.16s;
         }
+        > div {
+            width: 18px;
+            height: 18px;
+            background-color: $main-color-dark;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+            animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        }  
     }
-    .spinner > div {
-        width: 18px;
-        height: 18px;
-        background-color: $main-color-dark;
-        border-radius: 100%;
-        display: inline-block;
-        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    }  
+    // .spinner > div {
+    //     width: 18px;
+    //     height: 18px;
+    //     background-color: $main-color-dark;
+    //     border-radius: 100%;
+    //     display: inline-block;
+    //     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    //     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    // }  
       
       @-webkit-keyframes sk-bouncedelay {
         0%, 80%, 100% { -webkit-transform: scale(0) }
@@ -101,7 +110,6 @@ header {
     @include breakpoint(small only) {
         height: 140px;
     }
-
     .top-info {
         padding: 10px;
         background-color: $main-color;
@@ -191,7 +199,7 @@ header {
         height: 10vw;
         border: 0;
         max-height: 145px;
-      }
+    }
     .logo-container {
         position: absolute;
         width: 150px;
@@ -219,12 +227,10 @@ header {
             width: 160px;
         }
     }
-  }
+}
   .skewed {
     height: 50px;
-    -webkit-transform: skewY(-6deg);
-    -ms-transform: skewY(-6deg);
-    transform: skewY(-6deg);
+    @include skewY(-6deg);
     margin-top: 0;
     z-index: 100;
     .top-bar {
@@ -245,6 +251,7 @@ header {
     }
 }
 
+// ORBIT / SLIDER
 main {
     background-color: $white;
     margin: 0;
@@ -329,7 +336,6 @@ main {
                         margin-right: 150px;
                     }
                 } 
-                
                 .pizza-cutout {
                     height: auto;
                     width: 500px;
@@ -348,8 +354,6 @@ main {
                     @include breakpoint(xlarge) {
                         width: 600px;
                     }
-
-
                 }
             }
         }
@@ -369,7 +373,6 @@ main {
                 @include breakpoint(medium only) {
                     font-size: 1.5em;
                 }
-
             }
             .orbit-button {
                 width: 150px;
@@ -386,6 +389,7 @@ main {
         }
     }
 
+    // MENU
     .food {
         margin: 0 ;
         padding: 0 0 10px 0;
@@ -414,24 +418,18 @@ main {
                 @include breakpoint(small down) {
                     margin: 4px 8px 0;
                 }
-                    .food-icon {
-                        width: 40px;
-                        @include breakpoint(small down) {
-                            width: 30px;
-                        }
+                > a {
+                    @include breakpoint(small) {
+                        margin-right: 2px;
+                        padding: 3px;
                     }
-            }
-            .tabs-title > a {
-                // width: 100%;
-                // height: 100%;
-                // border-radius: 2000px;
-                @include breakpoint(small) {
-                    margin-right: 2px;
-                    padding: 3px;
                 }
-            }
-            .tabs-title > * {
-                pointer-events: none;
+                .food-icon {
+                    width: 40px;
+                    @include breakpoint(small down) {
+                        width: 30px;
+                    }
+                }
             }
             .is-active > a > svg > path {
                 fill: $main-color-dark;
@@ -439,25 +437,17 @@ main {
             .is-active > a > svg > g > g {
                 fill: $main-color-dark;
             }
-
         }
         .skewed-small-light {
             height: 15px;
             background-color: lighten($main-color, 30%);
-            // background-color: $yellowish;
-
-            -webkit-transform: skewY(-6deg);
-            -ms-transform: skewY(-6deg);
-            transform: skewY(-6deg);
+            @include skewY(-6deg);
             margin-top: 30px;
         }
-
         .skewed-small {
             height: 65px;
             background-color: $main-color;
-            -webkit-transform: skewY(-6deg);
-            -ms-transform: skewY(-6deg);
-            transform: skewY(-6deg);
+            @include skewY(-6deg);
             margin-bottom: 40px;
         }
         .tabs-content {
@@ -481,7 +471,7 @@ main {
                 .menu-container {    
                     td {
                         padding: 4px;
-                    }                
+                    }              
                     @include breakpoint(medium up) {
                         .size {
                             width: 80px;
@@ -490,7 +480,6 @@ main {
                     .menu-item-info {
                         margin-bottom: 20px;
                         p {
-                            // font-style: italic;
                             margin-bottom: 0;
                         }
                         .button {
@@ -520,7 +509,6 @@ main {
                             color: $black;
                             margin-right: 6px;
                         }
-
                     }
                     .food-name {
                         font-weight: 600;
@@ -544,31 +532,16 @@ main {
         }
     }
 }
+
+// GALLERY
 .gallery-container {
     height: auto;
     background-color: $white;
     .arrow {
-        margin: 0 auto;
-        padding: 0;
-        background-color: $main-color;
-        &::before {
-            margin: 0 auto;
-            @include css-triangle(20px, $white, down);
-        }
+        @include arrow;
     }
     h4 {
-        height: 60px;
-        padding: 15px 0 10px;
-        margin: 0;
-        background-color: $main-color;
-        color: $white;
-        font-family: 'Oswald', 'PT Sans', sans-serif;
-        font-weight: 500;
-        text-transform: uppercase;
-        @include breakpoint(small only) {
-            height: 50px;
-            padding: 15px 0 8px;
-        }
+        @include arrow-header;
     }
     .gallery {
         margin: 40px 80px;
@@ -604,12 +577,10 @@ main {
                 }
                 li {
                     width: 21%;
-                    // height: 150px;
                     overflow: hidden;
                     margin: 0 0 20px auto;
                     @include breakpoint(small only) {
                         width: 43%;
-                        // height: 90px;
                     }     
                     @include breakpoint(medium down) {
                         margin: 10px auto;
@@ -635,32 +606,15 @@ main {
     }      
 }
 
+// MAP
 .map {
     .arrow {
-        margin: 0 auto;
-        padding: 0;
-        background-color: $main-color;
-        &::before {
-            margin: 0 auto;
-            @include css-triangle(25px, $white, down);
-        }
+        @include arrow;
     }
     h4 {
-        height: 60px;
-        padding: 15px 0 10px;
-        margin: 0;
-        background-color: $main-color;
-        color: $white;
-        font-family: 'Oswald', 'PT Sans', sans-serif;
-        font-weight: 500;
-        text-transform: uppercase;
-        @include breakpoint(small only) {
-            height: 50px;
-            padding: 15px 0 8px;
-        }
-
+        @include arrow-header;
     }
-    #map {
+    .google-map {
     width: 100%;
     height: 400px;
     background-color: $white; 
@@ -671,6 +625,7 @@ main {
     }
 }
 
+// SEPARATOR WITH INFO
 .separator {
     width: 100%;
     padding: 80px 0;
@@ -690,6 +645,7 @@ main {
     }
 }
 
+// FOOTER
 footer {
     overflow: hidden;
     margin: 0;
@@ -706,8 +662,6 @@ footer {
         @include breakpoint(large) {
             padding: 40px 0;
         }
-
-
         .footer-info {
             margin: 0;
             padding: 0;
@@ -727,8 +681,8 @@ footer {
         .time {
             color: $main-color-dark;
             padding: 15px 0;
-            border-left: 1px solid $light-gray;
-            border-right: 1px solid $light-gray;
+            border-left: $my-border;
+            border-right: $my-border;
             @include breakpoint(small only) {
                 padding: 10px 0;
                 border: none;
@@ -742,7 +696,6 @@ footer {
                 margin-right: 15px;
             }
         }
-
         .footer-slogan {
             h5 {
                 color: $white;
@@ -758,23 +711,18 @@ footer {
                 @include breakpoint(medium only) {
                     padding: 20px 12px;
                 }
-
                 &:hover {
                     background-color: lighten($yellowish, 5%);
-                    -webkit-transform: skew(-15deg);
-                    -ms-transform: skew(-15deg);
-                        transform: skew(-15deg);
+                    @include skew(-15deg);
                     -webkit-transition: .5s ease-in-out;
                     -o-transition: .5s ease-in-out;
                         transition: .5s ease-in-out;
-                }
-                &:hover > a {
-                    -webkit-transform: skew(15deg);
-                    -ms-transform: skew(15deg);
-                        transform: skew(15deg);
-                    -webkit-transition: .5s ease-in-out;
-                    -o-transition: .5s ease-in-out;
-                        transition: .5s ease-in-out;
+                    > a {
+                        @include skew(15deg);
+                        -webkit-transition: .5s ease-in-out;
+                        -o-transition: .5s ease-in-out;
+                            transition: .5s ease-in-out;
+                    }
                 }
                 a {
                     display: inline-block;

@@ -66,11 +66,10 @@
 
 // $main-color: #5ea5b7;
 $main-color: #5ca4b4;
-$matching-color: #5E76B7;
 $yellowish: #ffc338;
 // $yellowish: #ffc02d;
-$main-color-light: #f6fafb;
 $main-color-dark: #3e7b8a;
+$main-color-light: lighten($main-color, 45%);
 $light-gray: #f5f5f5;
 $my-border: 1px solid $light-gray;
 

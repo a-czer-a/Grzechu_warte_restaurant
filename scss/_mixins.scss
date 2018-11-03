@@ -1,0 +1,33 @@
+@mixin skew($deg) {
+    -webkit-transform: skew($deg);
+    -ms-transform: skew($deg);
+    transform: skew($deg);
+}
+@mixin skewY($deg) {
+    -webkit-transform: skewY($deg);
+    -ms-transform: skewY($deg);
+    transform: skewY($deg);
+}
+@mixin arrow {
+    margin: 0 auto;
+    padding: 0;
+    background-color: $main-color;
+    &::before {
+        margin: 0 auto;
+        @include css-triangle(20px, $white, down);
+    }
+}
+@mixin arrow-header {
+    height: 60px;
+    padding: 15px 0 10px;
+    margin: 0;
+    background-color: $main-color;
+    color: $white;
+    font-family: 'Oswald', 'PT Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    @include breakpoint(small only) {
+        height: 50px;
+        padding: 15px 0 8px;
+    }
+}
