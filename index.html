@@ -9,17 +9,12 @@
     <title>Grzechu Warte</title>
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="prefetch" href="img/grzechu-warte-logo.jpg">
-    <!-- <link rel="prefetch" href="img/img-tiny-jpg/rr2-round.jpg">
-    <link rel="prefetch" href="img/img-tiny-jpg/pizza-round2.jpg">
-    <link rel="prefetch" href="img/img-tiny-jpg/kids2-round.jpg"> -->
     <link rel="prefetch" href="webfonts/fa-brands-400.woff2">
     <link rel="prefetch" href="webfonts/fa-solid-900.woff2">
     <link rel="shortcut icon" href="img/grzechu-warte-shorcut-icon.jpg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,600|PT+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|PT+Sans">
     <link rel="stylesheet" type="text/css" href="css/app.css">
     <link rel="manifest" href="webmanifest.json">
-    <!-- uzupełnić -->
-    <!-- <link rel="canonical" href="https://example.com"/> -->
   </head>
   <body>
     <!-- LOADER -->
@@ -34,15 +29,14 @@
     <header>
         <div class="top-info grid-x align-justify">
             <div class="cell small-10 medium-10 large-10">
-                <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
-                    <button class="menu-icon" type="button" data-toggle="example-menu"></button>
-                  </div>
-        
-              <ul class="menu vertical medium-horizontal" id="example-menu">
-                  <li><a href="#menu">Menu</a></li>
-                  <li><a href="#galeria">Galeria</a></li>
-                  <li><a href="#kontakt">Kontakt</a></li>
-              </ul>
+                <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+                    <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+                </div>
+                <ul class="menu vertical medium-horizontal" id="responsive-menu" data-smooth-scroll>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
             </div>
             <div class="top-social cell small-2 medium-2 large-2 text-right "><a href="https://www.facebook.com/Grzechu-Warte-2211861392436989/" class="cell small-6 medium-6 large-6 align-self-middle text-right" aria-hidden="false" title="Ikona Facebooka" aria-label="Przejdź do naszej strony na Facebooku"><span class="sr-only">Link do Facebooka</span><i class="fab fa-facebook-square"></i></a></div>
         </div>
@@ -80,13 +74,13 @@
                   <div class="orbit-slogan text-center show-for-large">
                     <h3>Sześć burgerów do wyboru, różne sosy</h3>
                     <h5>Z wołowiną, wieprzowiną lub wege!</h5>
-                    <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                    <button class="button orbit-button" type="button" data-smooth-scroll><a href="#menu">Zobacz menu</a></button>
                   </div>
                 </figure>
                 <div class="hide-for-large orbit-slogan-mobile text-center">
                   <h3>Sześć burgerów do wyboru</h3>
                   <h5>Z wołowiną, wieprzowiną lub wege!</h5>
-                  <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                  <button class="button orbit-button" type="button" data-smooth-scroll><a href="#menu">Zobacz menu</a></button>
                 </div>
               </li>
               <li class="orbit-slide">
@@ -101,13 +95,13 @@
                   <div class="orbit-slogan text-center show-for-large">
                     <h3>Pyszna pizza, naturalne składniki</h3>
                     <h5>Wybierz sos i spód pizzy!</h5>
-                    <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                    <button class="button orbit-button" type="button" data-smooth-scroll><a href="#menu">Zobacz menu</a></button>
                   </div>  
                 </figure>
                 <div class="hide-for-large orbit-slogan-mobile text-center">
                     <h3>Pyszna pizza, naturalne składniki</h3>
                     <h5>Wybierz sos i spód pizzy!</h5>
-                    <button class="button orbit-button" type="button"><a href="#menu">Zobacz menu</a></button>
+                    <button class="button orbit-button" type="button" data-smooth-scroll><a href="#menu">Zobacz menu</a></button>
                 </div>      
               </li>
               <!-- <li class="is-active orbit-slide">
@@ -376,9 +370,9 @@
                         <thead>
                           <tr>
                             <th class="invisible">Pizza</th>
-                            <th width="60" class="text-center size">L<br><span class="ingredients">30 &#216;</span></th>
-                            <th width="60" class="text-center size">XL<br><span class="ingredients">42 &#216;</span></th>
-                            <th width="60" class="text-center size">XXL<br><span class="ingredients">60 &#216;</span></th>
+                            <th class="text-center th-width">L<br><span class="ingredients">30 &#216;</span></th>
+                            <th class="text-center th-width">XL<br><span class="ingredients">42 &#216;</span></th>
+                            <th class="text-center th-width">XXL<br><span class="ingredients">60 &#216;</span></th>
                           </tr>
                         </thead>
                         <tbody>
@@ -548,27 +542,27 @@
                           <tbody>
                             <tr>
                               <td><span class="food-name">1. Boski polski</span><br><span class="ingredients">wołowina 100%, bułka pszenna, mix sałat, cheddar, czerwona cebula, ogórek konserwowy, pomidor, grillowane pieczarki, sos musztardowy</span></td>
-                              <td class="size" width="60">17 zł</td>
+                              <td class="price text-right">17 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">2. Szefa</span><br><span class="ingredients">szarpana wieprzowina, bułka pszenna, mix sałat, czerwona cebula, ogórek, pomidor, ser mimolette, sos tatarski lub firmowy</span></td>
-                              <td>17 zł</td>
+                              <td class="price text-right">17 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">3. Piekielnie ostry</span><br><span class="ingredients">wołowina 100%, bułka pszenna, jalapeño, czerwona cebula, sałata, pomidor, ogórek, grillowane pieczarki, sos firmowy</span></td>
-                              <td>17 zł</td>
+                              <td class="price text-right">17 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">4. W greckim stylu</span><br><span class="ingredients">kurczak gyros, bułka, mix sałat, cebula czerwona, ser feta, pomidor, oliwki, sos czosnkowy</span></td>
-                              <td>17 zł</td>
+                              <td class="price text-right">17 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">5. Lżejsza wersja</span><br><span class="ingredients">bazyliowe pesto, bułka, mozarella di bufala, rukola, czerwona cebula, pomidor, ogórek, prażone pestki nasion, ser Grana Padano</span></td>
-                              <td>17 zł</td>
+                              <td class="price text-right">17 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">6. Nazwij go, jak chcesz</span><br><span class="ingredients">grillowany camembert, bułka, rukola, czerwona cebula, ser mimolette, pomidor, ogórek konserwowy, grillowana gruszka, sos musztardowy</span></td>
-                              <td>17 zł</td>
+                              <td class="price text-right">17 zł</td>
                             </tr>
                           </tbody>
                         </table>
@@ -593,19 +587,19 @@
                           <tbody>
                             <tr>
                               <td><span class="food-name">1. Zielone tagliatelle</span><br><span class="ingredients">sos śmietanowy, brokuł, groszek, ser Grana Padano, szczypiorek</span></td>
-                              <td class="size" width="60">22 zł</td>
+                              <td class="price text-right">22 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">2. Tagliatelle z kurczakiem</span><br><span class="ingredients">sos śmietanowy, cebula, boczek, kurczak, pieczarki, ser Grana Padano</span></td>
-                              <td>26 zł</td>
+                              <td class="price text-right">26 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">3. Tortellini serowe ze szpinakiem</span><br><span class="ingredients">sos śmietanowy, czosnek, cebula, szpinak, kurczak, jajko, ser Grana Padano</span></td>
-                              <td>26 zł</td>
+                              <td class="price text-right">26 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">4. Tagliatelle z krewetkami</span><br><span class="ingredients">krewetki tygrysie, pomidorki koktajlowe, czosnek, sos śmietanowy, ser Grana Padano</span></td>
-                              <td>26 zł</td>
+                              <td class="price text-right">26 zł</td>
                             </tr>
                           </tbody>
                         </table>
@@ -630,23 +624,23 @@
                           <tbody>
                             <tr>
                               <td><span class="food-name">1. Z bazyliowym pesto</span><br><span class="ingredients">mix sałat, tortellini, mini mozarella, orzechy, ser Grana Padano, bazyliowe pesto</span></td>
-                              <td class="size" width="60">18 zł</td>
+                              <td class="price text-right">18 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">2. Z krewetkami</span><br><span class="ingredients">mix sałat, pomidorki koktajlowe, krewetki tygrysie, ogórek, prażone pestki nasion, sos czosnkowy, szczypiorek</span></td>
-                              <td>20 zł</td>
+                              <td class="price text-right">20 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">3. Z kurczakiem</span><br><span class="ingredients">mix sałat, grillowane fileciki drobiowe, ser feta, pomidorki koktajlowe, ogórek, czerwona cebula, sos czosnkowy</span></td>
-                              <td>19 zł</td>
+                              <td class="price text-right">19 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">4. Z pieczonym burakiem</span><br><span class="ingredients">rukola, burak, ser feta, czerwona cebula, pomidorki koktajlowe, jajko, ogórek, prażone pestki nasion, dressing</span></td>
-                              <td>18 zł</td>
+                              <td class="price text-right">18 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">5. Tęcza smaków</span><br><span class="ingredients">mix sałat, mini mozarella, mandarynka, pomidorki koktajlowe, orzechy, ser Grana Padano, dressing orzechowy</span></td>
-                              <td>18 zł</td>
+                              <td class="price text-right">18 zł</td>
                             </tr>
                           </tbody>
                         </table>
@@ -670,23 +664,23 @@
                           <tbody>
                             <tr>
                               <td><span class="food-name">Frytki i ketchup</span></td>
-                              <td width="130" class="text-right">150 g / 4 zł</td>
-                              <td width="130" class="text-right">300 g / 6 zł</td>
+                              <td class="text-right td-width">150 g / 4 zł</td>
+                              <td class="text-right td-width">300 g / 6 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Frytki z batatów i sos czosnkowy</span></td>
-                              <td width="130" class="invisible"></td>
-                              <td width="130" class="text-right">300 g / 10 zł</td>
+                              <td class="invisible td-width"></td>
+                              <td class="text-right td-width">300 g / 10 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Szarpanki i sos</span></td>
-                              <td width="130" class="invisible"></td>
-                              <td width="130" class="text-right">12 szt. / 6 zł</td>
+                              <td class="invisible td-width"></td>
+                              <td class="text-right td-width">12 szt. / 6 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Zakręcony ziemniak i sos</span></td>
-                              <td width="130" class="invisible"></td>
-                              <td width="130" class="text-right">7 zł</td>
+                              <td class="invisible td-width"></td>
+                              <td class="text-right td-width">7 zł</td>
                             </tr>
                           </tbody>
                         </table>
@@ -700,23 +694,23 @@
                           <tbody>
                             <tr>
                               <td><span class="food-name">Kawa cappuccino</span></td>
-                              <td width="130" class="text-right">7 zł</td>
+                              <td class="text-right td-width">7 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Kawa latte</span></td>
-                              <td width="130" class="text-right">8 zł</td>
+                              <td class="text-right td-width">8 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Kawa czarna</span></td>
-                              <td width="130" class="text-right">5 zł</td>
+                              <td class="text-right td-width">5 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Herbata (filiżanka)</span></td>
-                              <td width="130" class="text-right">5 zł</td>
+                              <td class="text-right td-width">5 zł</td>
                             </tr>
                             <tr>
                               <td><span class="food-name">Herbata (dzbanek)</span></td>
-                              <td width="130" class="text-right">8 zł</td>
+                              <td class="text-right td-width">8 zł</td>
                             </tr>
                           </tbody>
                         </table>
@@ -728,18 +722,18 @@
                             <tbody>
                               <tr>
                                 <td><span class="food-name">Coca-cola, Coca-cola Zero, Fanta, Sprite, Tonic Kinley</span></td>
-                                <td width="130" class="invisible"></td>
-                                <td width="130" class="text-right">0,25 l / 3,5 zł</td>
+                                <td class="invisible td-width"></td>
+                                <td class="text-right td-width">0,25 l / 3,5 zł</td>
                               </tr>
                               <tr>
                                 <td><span class="food-name">Woda gazowana / niegazowana</span></td>
-                                <td width="130" class="text-right">0,33 l / 3 zł</td>
-                                <td width="130" class="text-right">0,5 l / 3,5 zł</td>
+                                <td class="text-right td-width">0,33 l / 3 zł</td>
+                                <td class="text-right td-width">0,5 l / 3,5 zł</td>
                               </tr>
                               <tr>
                                 <td><span class="food-name">Soki Cappy</span></td>
-                                <td width="130" class="invisible"></td>
-                                <td width="130" class="text-right">0,25 l / 3,5 zł</td>
+                                <td class="invisible td-width"></td>
+                                <td class="text-right td-width">0,25 l / 3,5 zł</td>
                               </tr>
                             </tbody>
                           </table>
@@ -751,7 +745,7 @@
                               <tbody>
                                 <tr>
                                   <td><span class="food-name">Brackie Zlatecky</span></td>
-                                  <td width="130" class="text-right">0,5 l / 5 zł</td>
+                                  <td class="text-right td-width">0,5 l / 5 zł</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -763,15 +757,15 @@
                               <tbody>
                                 <tr>
                                   <td><span class="food-name">Żywiec, Warka, EB</span></td>
-                                  <td width="130" class="text-right">0,5 l / 6 zł</td>
+                                  <td class="text-right td-width">0,5 l / 6 zł</td>
                                 </tr>
                                 <tr>
                                   <td><span class="food-name">Desperados</span></td>
-                                  <td width="130" class="text-right">0,4 l / 7 zł</td>
+                                  <td class="text-right td-width">0,4 l / 7 zł</td>
                                 </tr>
                                 <tr>
                                   <td><span class="food-name">Heineken</span></td>
-                                  <td width="130" class="text-right">0,5 l / 7 zł</td>
+                                  <td class="text-right td-width">0,5 l / 7 zł</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -783,7 +777,7 @@
                               <tbody>
                                 <tr>
                                   <td><span class="food-name">Heineken, Żywiec, Warka Radler</span></td>
-                                  <td width="130" class="text-right">0,5 l / 6 zł</td>
+                                  <td class="text-right td-width">0,5 l / 6 zł</td>
                                 </tr>
                               </tbody>
                             </table>
@@ -1010,7 +1004,7 @@
     <!-- <script src="node_modules/foundation-sites/dist/js/plugins/foundation.core.min.js"></script>
     <script src="node_modules/foundation-sites/dist/js/plugins/foundation.interchange.min.js"></script>
     <script src="node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.min.js"></script> -->
-    <script src="js/app.js"></script>
+    <script src="js/app-min.js"></script>
     <script src="js/blazy.js"></script>
     <script src="js/lazy-load-google-maps.js"></script>
     <script src="js/google-map.js"></script>
@@ -1019,9 +1013,7 @@
             $("#loader-wrapper").fadeOut();
         });
     </script>
-
-  
-    <!-- <script>
+    <script>
         if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/service-worker.js')
         .then(registration =>
@@ -1030,6 +1022,6 @@
             console.log(`Registration failed with + ${error}`)
         )
 };
-    </script> -->
+    </script>
   </body>
 </html>

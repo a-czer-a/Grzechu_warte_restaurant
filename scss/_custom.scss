@@ -1,7 +1,7 @@
 body {
-    background-color: $white;
     max-width: 1300px;
     margin: 0 auto;
+    background-color: $white;
     @media screen and (min-width: 1301px) {
         border: $my-border;
     }
@@ -31,24 +31,24 @@ body {
 }
 #loader-wrapper {
     position: fixed;
+    display: none;
     margin: 0;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: #fff;
-    display: none;
+    background: $white;
     .spinner {
         position: absolute;
         top: 50%;
         left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
         margin: 0;
         width: 90px;
         text-align: center;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
         .bounce1 {
             -webkit-animation-delay: -0.32s;
             animation-delay: -0.32s;
@@ -58,25 +58,15 @@ body {
             animation-delay: -0.16s;
         }
         > div {
+            display: inline-block;
             width: 18px;
             height: 18px;
             background-color: $main-color-dark;
             border-radius: 100%;
-            display: inline-block;
             -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
             animation: sk-bouncedelay 1.4s infinite ease-in-out both;
         }  
     }
-    // .spinner > div {
-    //     width: 18px;
-    //     height: 18px;
-    //     background-color: $main-color-dark;
-    //     border-radius: 100%;
-    //     display: inline-block;
-    //     -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    //     animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    // }  
-      
       @-webkit-keyframes sk-bouncedelay {
         0%, 80%, 100% { -webkit-transform: scale(0) }
         40% { -webkit-transform: scale(1.0) }
@@ -96,27 +86,30 @@ body {
 // HEADER
 header {
     position: relative;
-    height: 190px;
+    // height: 190px;
     max-width: 1300px;
     background-color: $main-color;
     z-index: 1;
-    font-family: 'Oswald', 'PT Sans', sans-serif;
-    @include breakpoint(xlarge) {
-        height: 210px;
-    }
-    @include breakpoint(medium) {
-        height: 180px;
-    }
+    font-family: 'Oswald', 'PT Sans', 'Roboto' sans-serif;
     @include breakpoint(small only) {
         height: 140px;
     }
+    @include breakpoint(medium) {
+        height: 150px;
+    }
+    @include breakpoint(large) {
+        height: 170px;
+    }
+    // @include breakpoint(xlarge) {
+    //     height: 180px;
+    // }
     .top-info {
-        padding: 10px;
+        padding: 5px 5px 0;
         background-color: $main-color;
-        height: auto;
+        height: 70px;
         @include breakpoint(small only) {
             padding: 10px 0;
-            height: 140px;
+            height: 120px;
             text-align: center;
         }
         .title-bar {
@@ -128,8 +121,9 @@ header {
             @include breakpoint(small only) {
                 width: 100vw;
                 background-color: $main-color-dark;
-                height: 460px;
+                height: 430px;
                 z-index: 2000;
+                opacity: 0.98;
             }
             li {
                 padding: 0 0 3px 0;
@@ -155,17 +149,17 @@ header {
                     }
                 }
             }
-            a {
+            a {                
+                padding: 10px;
+                color: $white;
                 font-size: 1em;
                 font-weight: 600;
-                color: $white;
-                padding: 10px;
                 @include breakpoint(small only) {
-                    font-size: 1.1em;
                     padding: 18px 10px;
+                    font-size: 1.1em;
                 }
             }
-        }
+        }          
         li {
             padding-right: 15px;
             color: $white;
@@ -181,13 +175,17 @@ header {
           }
         .top-social {
             .fab {
+                margin-top: 10px;
+                padding-right: 15px;
                 color: $white;
                 font-size: 2em;
-                padding-right: 15px;
                 transition: all .3s ease-in;
                 &:hover {
                     transform: scale(1.1);
-                } 
+                }
+                @include breakpoint(small only) {
+                    margin-top: 4px;
+                }
             }
         }
     }
@@ -196,9 +194,15 @@ header {
         bottom: 0;
         width: 100%;
         max-width: 1300px;
-        height: 10vw;
+        height: 70px;
+        max-height: 100px;
         border: 0;
-        max-height: 145px;
+        @include breakpoint(large) {
+            height: 100px;
+        }
+        @include breakpoint(small only) {
+            height: 50px;
+        }
     }
     .logo-container {
         position: absolute;
@@ -234,9 +238,9 @@ header {
     margin-top: 0;
     z-index: 100;
     .top-bar {
+        margin-top: -40px;
         background-color: $white;
         border: none;
-        margin-top: -40px;
         .menu {
             background-color: $white;
             a {
@@ -253,9 +257,9 @@ header {
 
 // ORBIT / SLIDER
 main {
-    background-color: $white;
     margin: 0;
     padding-top: 30px;
+    background-color: $white;
     .orbit {
         .orbit-previous,
         .orbit-next {
@@ -319,6 +323,9 @@ main {
                     height: 220px;
                     width: auto;
                     margin: 30px 0 0 0;
+                    @include breakpoint(small only) {
+                        height: 200px;
+                    }
                     @include breakpoint(medium down) {
                         margin-top: 50px;
                         padding-bottom: 30px;
@@ -340,7 +347,10 @@ main {
                     height: auto;
                     width: 500px;
                     margin-top: 80px;
-                    @include breakpoint(medium down) {
+                    @include breakpoint(small only) {
+                        width: 300px;
+                    }
+                    @include breakpoint(medium) {
                         width: 390px;
                         margin-top: 50px;
                         padding-bottom: 30px;
@@ -400,6 +410,10 @@ main {
                 width: 90%;
                 margin: 0 auto;
             }
+            @media screen and (max-width: 330px) {
+                width: 100%;
+            }
+
             .tabs-title {
                 width: 60px;
                 height: 60px;
@@ -410,7 +424,7 @@ main {
                     outline: 0;
                 }
                 &:last-of-type {
-                    margin: 0;
+                    margin-right: 0;
                 }
                 @include breakpoint(medium) {
                     margin: 0 15px 0 0;
@@ -418,16 +432,18 @@ main {
                 @include breakpoint(small down) {
                     margin: 4px 8px 0;
                 }
+                @media screen and (min-width: 480px) and (max-width: 590px) {
+                    margin-right: 20px;
+                }
                 > a {
                     @include breakpoint(small) {
-                        margin-right: 2px;
                         padding: 3px;
                     }
                 }
                 .food-icon {
-                    width: 40px;
+                    width: 43px;
                     @include breakpoint(small down) {
-                        width: 30px;
+                        width: 35px;
                     }
                 }
             }
@@ -470,13 +486,23 @@ main {
                 }
                 .menu-container {    
                     td {
-                        padding: 4px;
-                    }              
+                        padding: 4px 4px 8px;
+                        @include breakpoint(small only) {
+                            padding: 0 0 6px;
+                        }
+                    }   
+                    .th-width {
+                        width: 60px;
+                    } 
                     @include breakpoint(medium up) {
-                        .size {
+                        .th-width {
                             width: 80px;
                         }
                     }   
+                    .td-width {
+                        width: 130px;
+                        padding-right: $td-padding;
+                    }
                     .menu-item-info {
                         margin-bottom: 20px;
                         p {
@@ -511,15 +537,29 @@ main {
                         }
                     }
                     .food-name {
+                        padding-left: $td-padding;
                         font-weight: 600;
+                        font-size: 1.1em;
                         .uppercase {
                             text-transform: uppercase;
                         }
+                        @include breakpoint(small only) {
+                            padding-left: 0;
+                            font-size: 1em;
+                        }
+                    }
+                    .price {
+                        width: 60px;
+                        padding-right: $td-padding;
                     }
                     .ingredients {
+                        display: inline-block;
+                        padding-left: $td-padding;
                         color: $main-color-dark;
-                        font-size: 90%;
                         font-weight: 500;
+                        @include breakpoint(small only) {
+                            padding-left: 0;
+                        }
                     }
                 }
                 .sosy {
@@ -630,7 +670,7 @@ main {
     width: 100%;
     padding: 80px 0;
     background-image: url('../img/pattern.jpg');
-    background-color: $yellowish;
+    background-color: $main-color;
     text-align: center;
     @include breakpoint(small only) {
         padding: 60px 40px 50px;

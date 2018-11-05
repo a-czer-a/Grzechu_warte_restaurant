@@ -1,8 +1,18 @@
 $(document).foundation();
+
 $(document).ready(function() {
     var bLazy = new Blazy();
     adjustImgHeight();
 });
+
+const menu = document.getElementById('responsive-menu');
+const link = menu.getElementsByTagName('li');
+
+function hideMenuOnClick() {
+    if (Foundation.MediaQuery.is('small only')) {
+        menu.style.display = 'none';
+    }
+}
 
 function adjustImgHeight() {
     const dynamicHeight = $('.gallery-img').width();
@@ -10,7 +20,10 @@ function adjustImgHeight() {
       'height': dynamicHeight + 'px'
   });
 }    
+
 window.addEventListener('resize', adjustImgHeight);
+menu.addEventListener('click', hideMenuOnClick);
+
 
 // EXTRA INFO BUTTON
 function openDivWithInfo() {
@@ -56,10 +69,9 @@ function openDivWithInfo() {
     } else {
         hiddenInfoChef.style.display = "none";
     }
-
 }
 
 // GALLERY
 $('.sim-thumb').on('click', function() {
     $('#main-product-image').attr('src', $(this).data('image'));
-  })  
+})  
